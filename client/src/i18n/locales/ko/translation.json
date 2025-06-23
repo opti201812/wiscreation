@@ -1,0 +1,523 @@
+{
+    "app": {
+        "title": "와이즈크리에이션",
+        "subtitle": "기업 웹사이트 및 SaaS 솔루션",
+        "slogan": "비즈니스를 위한 현명한 솔루션"
+    },
+    "nav": {
+        "home": "홈",
+        "about": "회사 소개",
+        "services": "서비스",
+        "contact": "문의하기",
+        "saas": "앱",
+        "login": "로그인",
+        "register": "회원가입",
+        "profile": "프로필",
+        "dashboard": "대시보드",
+        "projects": "프로젝트",
+        "tasks": "작업",
+        "settings": "설정",
+        "logout": "로그아웃",
+        "saasConsole": "SaaS 콘솔",
+        "saasShort": "WC",
+        "team": "팀 멤버",
+        "playground": "데모 플레이그라운드"
+    },
+    "footer": {
+        "quickLinks": "빠른 링크",
+        "contact": "연락처",
+        "address": "상하이시 푸동 신구 장강 하이테크 파크",
+        "newsletter": "뉴스레터",
+        "newsletterDesc": "뉴스레터를 구독하여 최신 제품 및 서비스 정보를 받아보세요.",
+        "emailPlaceholder": "이메일 주소",
+        "subscribe": "구독하기",
+        "rights": "모든 권리 보유.",
+        "privacy": "개인정보 처리방침",
+        "terms": "이용약관"
+    },
+    "home": {
+        "hero": {
+            "title": "비즈니스의 미래를 구축합니다",
+            "subtitle": "스마트한 솔루션으로 조직을 변화시킵니다",
+            "description": "저희는 최신 기술을 활용하여 귀하의 비즈니스를 다음 단계로 끌어올리는 솔루션을 제공합니다.",
+            "cta": "자세히 보기",
+            "secondary": "문의하기"
+        },
+        "services": {
+            "title": "서비스",
+            "subtitle": "비즈니스를 위한 종합적인 소프트웨어 솔루션"
+        },
+        "about": {
+            "title": "회사 소개",
+            "subtitle": "전문적인 개발 팀이 고품질 서비스를 제공합니다",
+            "description": "와이즈크리에이션은 기업 소프트웨어 솔루션을 제공하는 기술 회사입니다. 경험이 풍부한 개발 팀을 보유하고 있으며 고객에게 고품질의 소프트웨어 제품과 서비스를 제공하는 데 전념하고 있습니다."
+        },
+        "features": {
+            "title": "주요 서비스",
+            "subtitle": "맞춤형 솔루션",
+            "saas": {
+                "title": "클라우드 기반 SaaS 솔루션",
+                "description": "확장성 있는 클라우드 기반 소프트웨어로 비즈니스를 강화하세요"
+            },
+            "item1": {
+                "title": "웹 개발",
+                "description": "반응형 고성능 웹사이트 및 애플리케이션을 개발합니다."
+            },
+            "item2": {
+                "title": "모바일 앱",
+                "description": "iOS, Android 및 크로스 플랫폼 모바일 애플리케이션을 구축합니다."
+            },
+            "item3": {
+                "title": "디지털 마케팅",
+                "description": "온라인 존재감을 강화하고 더 많은 고객을 유치합니다."
+            },
+            "item4": {
+                "title": "클라우드 솔루션",
+                "description": "확장 가능하고 안전한 클라우드 인프라를 설계합니다."
+            }
+        },
+        "stats": {
+            "team": "전문 팀",
+            "projects": "성공적인 프로젝트",
+            "clients": "고객사",
+            "years": "사업 년수",
+            "yearsSuffix": "년"
+        },
+        "callToAction": {
+            "title": "오늘부터 비즈니스를 변화시키세요",
+            "subtitle": "저희 팀이 도와드립니다",
+            "button": "문의하기"
+        }
+    },
+    "about": {
+        "title": "회사 소개",
+        "subtitle": "와이즈크리에이션의 역사와 기업 문화",
+        "intro": {
+            "title": "회사 소개",
+            "content": "2018년에 설립된 와이즈크리에이션은 기업 소프트웨어 솔루션을 제공하는 기술 회사입니다. 저희 팀은 기술의 힘으로 기업의 디지털 변환을 지원하는 데 열정을 가진 혁신적인 기술 전문가로 구성되어 있습니다."
+        },
+        "values": {
+            "title": "핵심 가치",
+            "teamwork": "팀워크",
+            "excellence": "탁월함",
+            "innovation": "혁신",
+            "integrity": "정직"
+        },
+        "history": {
+            "title": "회사 역사",
+            "description": "2010년 설립 이후, 저희는 수백 명의 고객과 협력하여 디지털 변환 여정을 지원해 왔습니다. 저희는 우수한 서비스, 혁신적인 솔루션, 고객 중심 접근 방식을 통해 성장해 왔습니다.",
+            "milestones": {
+                "title": "주요 이정표",
+                "item1": "2010: 회사 설립",
+                "item2": "2012: 첫 대기업 고객 확보",
+                "item3": "2015: 모바일 앱 개발 부서 출범",
+                "item4": "2018: 아시아 전역으로 사업 확장",
+                "item5": "2020: 와이즈크리에이션 SaaS 플랫폼 출시",
+                "item6": "2023: 업계 리더로 인정받아 여러 상 수상"
+            }
+        },
+        "mission": {
+            "title": "사명",
+            "description": "우수한 디지털 솔루션을 통해 기업의 성장을 지원하는 것입니다. 혁신적인 접근 방식과 최신 기술을 결합하여 고객의 성공을 촉진합니다."
+        },
+        "vision": {
+            "title": "비전",
+            "description": "디지털 변환의 최전선에 서서 비즈니스가 경쟁에서 이기고 성장할 수 있도록 돕는 파트너로 인정받는 것입니다."
+        }
+    },
+    "services": {
+        "title": "서비스 및 제품",
+        "subtitle": "포괄적인 소프트웨어 개발 서비스와 혁신적인 클라우드 솔루션 제공",
+        "main": {
+            "title": "서비스",
+            "description": "비즈니스 디지털 변환을 지원하는 광범위한 서비스를 제공합니다."
+        },
+        "custom": {
+            "title": "맞춤형 소프트웨어 개발",
+            "description": "비즈니스 요구에 맞춘 소프트웨어 솔루션, 요구사항 분석부터 설계, 개발, 배포, 유지보수까지."
+        },
+        "saas": {
+            "title": "SaaS 서비스",
+            "description": "클라우드 기반 SaaS 솔루션으로 IT 비용을 줄이고 비즈니스의 유연성과 확장성을 높입니다."
+        },
+        "mobile": {
+            "title": "모바일 앱 개발",
+            "description": "iOS 및 Android 플랫폼을 지원하는 전문 모바일 애플리케이션 개발 서비스."
+        },
+        "security": {
+            "title": "네트워크 보안 서비스",
+            "description": "시스템과 데이터에 대한 포괄적인 보안 보장, 보안 평가, 취약점 스캔, 보안 강화 서비스 포함."
+        },
+        "webDev": {
+            "title": "웹 개발",
+            "description": "현대적이고 반응형 웹사이트와 애플리케이션을 개발하여 디지털 존재감을 강화합니다. 저희의 웹 솔루션은 매력적인 사용자 경험과 원활한 기능성을 결합하며 검색 엔진에서 잘 순위를 차지하도록 최적화되어 있습니다.",
+            "features": [
+                "반응형 웹 디자인",
+                "전자상거래 플랫폼",
+                "콘텐츠 관리 시스템",
+                "웹 애플리케이션",
+                "웹사이트 유지보수 및 지원"
+            ]
+        },
+        "mobileDev": {
+            "title": "모바일 앱 개발",
+            "description": "iOS, Android, 크로스 플랫폼 최신 모바일 애플리케이션을 구축합니다. 저희의 모바일 솔루션은 고성능이며 사용하기 쉽고 사용자가 언제 어디서나 비즈니스에 접근할 수 있게 합니다.",
+            "features": [
+                "iOS 앱 개발",
+                "Android 앱 개발",
+                "크로스 플랫폼 개발",
+                "모바일 앱 테스팅",
+                "앱 유지보수 및 업데이트"
+            ]
+        },
+        "specialization": {
+            "title": "전문 분야",
+            "enterprise": {
+                "title": "기업 애플리케이션",
+                "description": "기업을 위한 맞춤형 관리 시스템 및 사무용 애플리케이션으로 기업 운영 효율성을 높입니다."
+            },
+            "data": {
+                "title": "데이터 플랫폼",
+                "description": "데이터 수집, 분석 및 시각화 플랫폼으로 기업이 데이터 기반 의사결정을 할 수 있도록 돕습니다."
+            },
+            "ai": {
+                "title": "인공지능",
+                "description": "인공지능 및 기계학습 솔루션으로 기업에 지능형 비즈니스 프로세스를 창출합니다."
+            }
+        },
+        "techStacks": {
+            "title": "기술 스택",
+            "frontend": "프론트엔드 기술",
+            "backend": "백엔드 기술",
+            "database": "데이터베이스",
+            "cloud": "클라우드 플랫폼",
+            "mobile": "모바일 개발"
+        },
+        "caseStudies": {
+            "title": "성공 사례",
+            "case1": {
+                "title": "대형 소매 기업 관리 시스템",
+                "description": "고객을 위한 포괄적인 기업 관리 시스템 개발 (재고 관리, 판매 분석, 직원 관리 등), 운영 효율성 30% 향상.",
+                "tags": [
+                    "기업 관리",
+                    "React",
+                    "Node.js",
+                    "MySQL"
+                ]
+            },
+            "case2": {
+                "title": "금융 기술 데이터 분석 플랫폼",
+                "description": "금융 기관을 위한 데이터 분석 플랫폼으로 실시간 데이터 처리 및 시각화 지원, 시장 동향 및 고객 행동 이해 개선.",
+                "tags": [
+                    "데이터 분석",
+                    "Python",
+                    "React",
+                    "MongoDB"
+                ]
+            },
+            "case3": {
+                "title": "교육 산업 온라인 학습 플랫폼",
+                "description": "교육 기관을 위한 온라인 학습 플랫폼으로 과정 관리, 학생 상호작용, 과제 평가 등 기능 제공, 사용자로부터 높은 평가 획득.",
+                "tags": [
+                    "온라인 교육",
+                    "Vue.js",
+                    "Java",
+                    "PostgreSQL"
+                ]
+            }
+        },
+        "process": {
+            "title": "서비스 프로세스",
+            "step1": {
+                "title": "요구사항 소통",
+                "description": "비즈니스 요구사항과 목표를 깊이 이해하고 프로젝트 범위 및 기대 결과를 결정합니다."
+            },
+            "step2": {
+                "title": "방안 수립",
+                "description": "요구사항 분석을 바탕으로 상세한 기술 방안과 일정 및 예산을 포함한 프로젝트 계획을 수립합니다."
+            },
+            "step3": {
+                "title": "설계 및 개발",
+                "description": "계획에 따라 설계 및 개발 작업을 수행하고 정기적으로 진행 상황을 보여주고 피드백을 수집합니다."
+            },
+            "step4": {
+                "title": "테스트 및 검수",
+                "description": "포괄적인 테스트와 품질 보증을 실시하여 제품이 요구사항을 충족하고 고객에게 인도될 수 있도록 합니다."
+            },
+            "step5": {
+                "title": "배포",
+                "description": "배포를 지원하고 필요한 교육 및 문서를 제공하여 원활한 전환을 보장합니다."
+            },
+            "step6": {
+                "title": "지속적인 지원",
+                "description": "지속적인 기술 지원 및 유지보수 서비스를 제공하여 시스템이 안정적으로 운영되고 요구에 따라 최적화 및 업그레이드됩니다."
+            }
+        },
+        "callToAction": {
+            "title": "프로젝트를 시작할 준비가 되셨나요?",
+            "subtitle": "저희에게 연락하여 전문적인 상담과 솔루션을 받아보세요",
+            "button": "지금 문의하기"
+        }
+    },
+    "contact": {
+        "title": "문의하기",
+        "subtitle": "질문이나 협력 의향이 있으시면 언제든지 연락 주세요",
+        "form": {
+            "title": "메시지 보내기",
+            "name": "이름",
+            "namePlaceholder": "이름을 입력하세요",
+            "nameRequired": "이름을 입력해 주세요",
+            "phone": "전화번호",
+            "phonePlaceholder": "전화번호를 입력하세요",
+            "phoneRequired": "전화번호를 입력해 주세요",
+            "email": "이메일",
+            "emailPlaceholder": "이메일을 입력하세요",
+            "emailRequired": "이메일을 입력해 주세요",
+            "emailValid": "유효한 이메일 주소를 입력해 주세요",
+            "company": "회사명",
+            "companyPlaceholder": "회사명을 입력하세요 (선택사항)",
+            "subject": "문의 주제",
+            "subjectPlaceholder": "문의 주제를 입력하세요",
+            "subjectRequired": "문의 주제를 입력해 주세요",
+            "message": "메시지",
+            "messagePlaceholder": "요구사항을 자세히 설명해 주세요...",
+            "messageRequired": "메시지를 입력해 주세요",
+            "submit": "메시지 보내기",
+            "successMessage": "메시지가 전송되었습니다. 곧 연락 드리겠습니다!"
+        },
+        "info": {
+            "title": "연락처 정보",
+            "aboutDesc": "맞춤형 소프트웨어 개발, SaaS 서비스 또는 모바일 앱 개발이 필요하든, 저희는 전문적인 솔루션을 제공해 드립니다.",
+            "address": {
+                "title": "주소",
+                "line1": "중국 상하이시",
+                "line2": "푸동 신구 장강 하이테크 파크"
+            },
+            "phone": {
+                "title": "전화",
+                "number": "+86 123 4567 8910"
+            },
+            "email": {
+                "title": "이메일",
+                "address": "contact@wiscreation.com"
+            },
+            "hours": {
+                "title": "영업 시간",
+                "time": "월-금: 9:00 - 18:00"
+            }
+        },
+        "locations": {
+            "title": "위치",
+            "location1": "상하이"
+        },
+        "map": {
+            "placeholder": "지도 로딩 영역 - 상하이시 푸동 신구 장강 하이테크 파크"
+        }
+    },
+    "auth": {
+        "login": {
+            "title": "로그인",
+            "subtitle": "계정에 로그인하여 더 많은 기능에 접근하세요",
+            "email": "이메일",
+            "emailRequired": "이메일을 입력해 주세요",
+            "emailPlaceholder": "이메일을 입력하세요",
+            "emailValid": "유효한 이메일 주소를 입력해 주세요",
+            "password": "비밀번호",
+            "passwordRequired": "비밀번호를 입력해 주세요",
+            "passwordPlaceholder": "비밀번호를 입력하세요",
+            "remember": "로그인 상태 유지",
+            "forgot": "비밀번호를 잊으셨나요?",
+            "submit": "로그인",
+            "register": "회원가입하기",
+            "noAccount": "계정이 없으신가요?",
+            "success": "로그인 성공",
+            "demoHint": "이것은 데모 버전입니다. 로그인 버튼을 클릭하여 바로 들어가세요"
+        },
+        "register": {
+            "title": "계정 만들기",
+            "subtitle": "계정을 등록하여 서비스를 경험해보세요",
+            "username": "사용자 이름",
+            "usernameRequired": "사용자 이름을 입력해 주세요",
+            "usernameLength": "사용자 이름은 3자 이상이어야 합니다",
+            "email": "이메일",
+            "emailRequired": "이메일을 입력해 주세요",
+            "emailValid": "유효한 이메일 주소를 입력해 주세요",
+            "password": "비밀번호",
+            "passwordRequired": "비밀번호를 입력해 주세요",
+            "passwordLength": "비밀번호는 6자 이상이어야 합니다",
+            "confirm": "비밀번호 확인",
+            "confirmRequired": "비밀번호를 확인해 주세요",
+            "passwordMismatch": "입력한 두 비밀번호가 일치하지 않습니다",
+            "agreement": "다음에 동의합니다",
+            "terms": "이용약관",
+            "privacy": "개인정보 처리방침",
+            "agreementRequired": "이용약관에 동의해 주세요",
+            "submit": "가입하기",
+            "login": "로그인하기",
+            "hasAccount": "이미 계정이 있으신가요?",
+            "successMsg": "가입이 완료되었습니다. 로그인해 주세요"
+        },
+        "logout": {
+            "success": "로그아웃 되었습니다"
+        },
+        "demoUser": "데모 사용자"
+    },
+    "projects": {
+        "title": "프로젝트 관리",
+        "search": "프로젝트 검색...",
+        "all": "전체 프로젝트",
+        "inProgress": "진행중",
+        "completed": "완료됨",
+        "notStarted": "시작되지 않음",
+        "delayed": "지연됨",
+        "grid": "그리드 보기",
+        "list": "목록 보기",
+        "new": "새 프로젝트",
+        "filter": {
+            "title": "필터",
+            "all": "전체",
+            "myProjects": "내 프로젝트"
+        },
+        "card": {
+            "progress": "진행 상황",
+            "date": "~",
+            "tasks": "작업"
+        },
+        "actions": {
+            "details": "세부 정보 보기",
+            "team": "팀 보기",
+            "complete": "완료로 표시",
+            "manage": "팀 관리",
+            "docs": "프로젝트 문서",
+            "delete": "프로젝트 삭제"
+        }
+    },
+    "tasks": {
+        "title": "작업 관리",
+        "search": "작업 검색...",
+        "all": "모든 작업",
+        "filter": {
+            "title": "필터",
+            "all": "전체",
+            "assignedToMe": "내 작업"
+        },
+        "status": {
+            "all": "모든 상태",
+            "completed": "완료됨",
+            "inProgress": "진행중",
+            "notStarted": "시작되지 않음",
+            "delayed": "지연됨"
+        },
+        "date": {
+            "start": "시작일",
+            "end": "종료일"
+        },
+        "new": "새 작업",
+        "columns": {
+            "id": "ID",
+            "title": "작업 이름",
+            "project": "프로젝트",
+            "assignee": "담당자",
+            "priority": "우선순위",
+            "status": "상태",
+            "dueDate": "마감일",
+            "actions": "작업"
+        },
+        "actions": {
+            "view": "보기",
+            "edit": "편집"
+        }
+    },
+    "dashboard": {
+        "title": "대시보드 개요",
+        "projects": "전체 프로젝트 수",
+        "tasks": "대기 중인 작업",
+        "completed": "완료된 작업",
+        "members": "팀 멤버",
+        "progress": "프로젝트 진행 상황",
+        "activities": "최근 활동"
+    },
+    "settings": {
+        "title": "시스템 설정",
+        "account": {
+            "title": "계정 설정",
+            "username": "사용자 이름",
+            "email": "이메일",
+            "language": "언어",
+            "timezone": "시간대",
+            "save": "설정 저장"
+        },
+        "security": {
+            "title": "보안 설정",
+            "password": {
+                "title": "비밀번호 변경",
+                "current": "현재 비밀번호",
+                "new": "새 비밀번호",
+                "confirm": "새 비밀번호 확인"
+            },
+            "tfa": "이중 인증 활성화",
+            "notification": "로그인 활동 알림"
+        },
+        "notification": {
+            "title": "알림 설정",
+            "email": "이메일 알림",
+            "task": "작업 할당",
+            "due": "작업 마감일 알림",
+            "project": "프로젝트 업데이트",
+            "system": "시스템 공지",
+            "marketing": "마케팅 이메일"
+        },
+        "ui": {
+            "title": "UI 설정",
+            "theme": "테마",
+            "light": "라이트",
+            "dark": "다크",
+            "system": "시스템",
+            "density": "UI 밀도",
+            "default": "기본",
+            "middle": "중간",
+            "compact": "컴팩트",
+            "menu": "메뉴 모드",
+            "inline": "인라인",
+            "horizontal": "수평",
+            "dashboard": "대시보드 레이아웃",
+            "custom": "사용자 정의"
+        }
+    },
+    "common": {
+        "back": "홈으로 돌아가기",
+        "loading": "로딩 중...",
+        "error": "오류",
+        "success": "성공",
+        "save": "저장",
+        "cancel": "취소",
+        "delete": "삭제",
+        "edit": "편집",
+        "view": "보기",
+        "submit": "제출",
+        "or": "또는",
+        "and": "그리고",
+        "learnMore": "자세히 보기",
+        "contactUs": "문의하기",
+        "actions": {
+            "view": "보기",
+            "edit": "편집",
+            "delete": "삭제",
+            "save": "저장",
+            "cancel": "취소",
+            "confirm": "확인",
+            "back": "뒤로",
+            "next": "다음",
+            "search": "검색"
+        },
+        "status": {
+            "success": "성공",
+            "error": "오류",
+            "warning": "경고",
+            "info": "정보"
+        }
+    },
+    "notFound": {
+        "message": "죄송합니다. 요청하신 페이지를 찾을 수 없습니다."
+    }
+}

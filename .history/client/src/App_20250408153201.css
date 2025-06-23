@@ -1,0 +1,17 @@
+/* Remove default CRA styles if any */
+
+/* Add basic styles for Ant Design Layout if needed */
+.logo {
+   float: left;
+   width: 120px;
+   height: 31px;
+   margin: 16px 24px 16px 0;
+   background: rgba(255, 255, 255, 0.3);
+   /* You can replace this with your actual logo */
+}
+
+.site-layout-content {
+   background: #fff;
+   padding: 24px;
+   min-height: calc(100vh - 134px); /* Adjust based on header/footer height */
+}

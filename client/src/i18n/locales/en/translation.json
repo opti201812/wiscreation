@@ -1,0 +1,502 @@
+{
+    "app": {
+        "title": "WisCreation",
+        "subtitle": "Enterprise Website & SaaS Solutions"
+    },
+    "nav": {
+        "home": "Home",
+        "about": "About Us",
+        "services": "Services",
+        "contact": "Contact",
+        "saas": "SaaS App",
+        "login": "Login",
+        "register": "Register",
+        "logout": "Logout",
+        "saasConsole": "SaaS Console",
+        "saasShort": "WC",
+        "dashboard": "Dashboard",
+        "profile": "Profile",
+        "settings": "Settings",
+        "team": "Team Members",
+        "playground": "Demo Playground"
+    },
+    "footer": {
+        "quickLinks": "Quick Links",
+        "contact": "Contact Info",
+        "address": "Pudong New District, Zhang Jiang Hi-Tech Park, Shanghai",
+        "newsletter": "Newsletter",
+        "newsletterDesc": "Subscribe to our newsletter to receive the latest product and service updates.",
+        "emailPlaceholder": "Your email address",
+        "subscribe": "Subscribe",
+        "rights": "All rights reserved.",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service"
+    },
+    "home": {
+        "hero": {
+            "title": "Digital Solutions for Enterprise Innovation",
+            "subtitle": "Help businesses improve efficiency, reduce costs, and enhance competitiveness through our software products and services",
+            "cta": "Learn More"
+        },
+        "services": {
+            "title": "Our Services",
+            "subtitle": "Comprehensive software solutions for your business"
+        },
+        "about": {
+            "title": "About Us",
+            "subtitle": "Professional software development team providing quality services",
+            "description": "WisCreation is a technology company focused on providing software solutions for enterprises. We have an experienced development team dedicated to delivering high-quality software products and services to our clients."
+        },
+        "features": {
+            "saas": {
+                "title": "Cloud SaaS Solutions",
+                "description": "Cloud-based Software as a Service solutions that empower your business"
+            }
+        },
+        "stats": {
+            "team": "Professional Team",
+            "projects": "Successful Projects",
+            "clients": "Clients",
+            "years": "Years of Experience",
+            "yearsSuffix": "years"
+        },
+        "callToAction": {
+            "button": "Contact Us Now"
+        }
+    },
+    "about": {
+        "title": "About Us",
+        "subtitle": "Learn about WisCreation's history and corporate culture",
+        "intro": {
+            "title": "Company Introduction",
+            "content": "Founded in 2018, WisCreation is a technology company focused on providing software solutions for enterprises. Our team consists of passionate and innovative technical experts dedicated to helping businesses achieve digital transformation through the power of technology."
+        },
+        "values": {
+            "title": "Our Core Values",
+            "teamwork": "Teamwork",
+            "excellence": "Excellence",
+            "innovation": "Innovation",
+            "integrity": "Integrity"
+        },
+        "history": {
+            "title": "Development History",
+            "milestones": {
+                "title": "Key Milestones",
+                "item1": "2010: Company Founded",
+                "item2": "2012: First Major Enterprise Client",
+                "item3": "2015: Mobile App Development Division",
+                "item4": "2018: Expansion Across Asia",
+                "item5": "2020: WisCreation SaaS Platform Launch",
+                "item6": "2023: Industry Leader Recognition"
+            },
+            "milestone1": "Our company was established in Shanghai, initially focusing on website development services for local businesses.",
+            "milestone2": "As our business grew, we acquired our first major enterprise client and began offering a wider range of software development services.",
+            "milestone3": "To meet the growing demand for mobile applications, we established a dedicated mobile app development team.",
+            "milestone4": "We expanded our operations across Asia, opening offices in Beijing, Tokyo, and Singapore.",
+            "milestone5": "We launched our own SaaS platform, providing scalable cloud solutions for small and medium-sized businesses.",
+            "milestone6": "Our efforts were recognized as we were named an industry leader in software development and received multiple awards for technical innovation."
+        },
+        "mission": {
+            "title": "Our Mission",
+            "description": "To help businesses grow through excellent digital solutions. We combine innovative approaches and the latest technologies to drive our clients' success."
+        },
+        "team": {
+            "title": "Leadership Team",
+            "description": "We firmly believe that teamwork is the key to success. We encourage open communication and diverse thinking to create outstanding results together."
+        },
+        "vision": {
+            "title": "Our Vision",
+            "description": "Our vision is to be a leader at the forefront of digital transformation, helping businesses stand out in competition and achieve growth."
+        }
+    },
+    "services": {
+        "title": "Services & Products",
+        "subtitle": "We provide comprehensive software development services and innovative cloud solutions",
+        "main": {
+            "title": "Our Main Services"
+        },
+        "custom": {
+            "title": "Custom Software Development",
+            "description": "Tailored software solutions based on your business needs, from requirement analysis and design to deployment and maintenance."
+        },
+        "webDev": {
+            "features": [
+                "Enterprise application development",
+                "E-commerce solutions",
+                "CRM & ERP systems",
+                "Content management systems",
+                "Web portal development"
+            ]
+        },
+        "saas": {
+            "title": "SaaS Services",
+            "description": "Cloud-based Software as a Service solutions that help businesses reduce IT costs and improve business flexibility and scalability."
+        },
+        "cloudSolutions": {
+            "features": [
+                "Cloud migration services",
+                "SaaS product development",
+                "Cloud infrastructure management",
+                "Serverless applications",
+                "Scalable cloud solutions"
+            ]
+        },
+        "mobile": {
+            "title": "Mobile App Development",
+            "description": "Professional mobile application development services supporting iOS and Android platforms to provide mobile solutions for your business."
+        },
+        "mobileDev": {
+            "features": [
+                "Native iOS and Android apps",
+                "Cross-platform development",
+                "Mobile UI/UX design",
+                "App maintenance and updates",
+                "Mobile app optimization"
+            ]
+        },
+        "security": {
+            "title": "Network Security Services",
+            "description": "Comprehensive security protection for your systems and data, including security assessment, vulnerability scanning, and security hardening services.",
+            "features": [
+                "Security audits & assessments",
+                "Vulnerability management",
+                "Compliance solutions",
+                "Security monitoring",
+                "Incident response"
+            ]
+        },
+        "specialization": {
+            "title": "Our Areas of Expertise",
+            "enterprise": {
+                "title": "Enterprise Solutions",
+                "description": "Comprehensive enterprise-grade software solutions tailored to streamline operations and drive business growth."
+            },
+            "data": {
+                "title": "Data Management",
+                "description": "Advanced data solutions including big data processing, data warehousing, and business intelligence systems."
+            },
+            "ai": {
+                "title": "AI & Machine Learning",
+                "description": "Cutting-edge AI solutions to automate processes, gain insights from data, and enhance decision-making."
+            }
+        },
+        "techStacks": {
+            "title": "Our Technology Stack",
+            "frontend": "Frontend",
+            "backend": "Backend",
+            "database": "Database",
+            "cloud": "Cloud",
+            "mobile": "Mobile"
+        },
+        "caseStudies": {
+            "title": "Case Studies",
+            "case1": {
+                "title": "E-commerce Platform Transformation",
+                "description": "We helped a retail company transform their traditional business with a modern e-commerce platform, resulting in a 200% increase in online sales within six months.",
+                "tags": [
+                    "E-commerce",
+                    "React",
+                    "Node.js",
+                    "MongoDB",
+                    "AWS"
+                ]
+            },
+            "case2": {
+                "title": "Enterprise Resource Planning System",
+                "description": "Developed a comprehensive ERP solution for a manufacturing company, integrating inventory management, production planning, and supply chain operations.",
+                "tags": [
+                    "ERP",
+                    "Java",
+                    "PostgreSQL",
+                    "Docker",
+                    "Microservices"
+                ]
+            },
+            "case3": {
+                "title": "Mobile Banking Application",
+                "description": "Created a secure and user-friendly mobile banking application for a financial institution, featuring biometric authentication and real-time transaction processing.",
+                "tags": [
+                    "FinTech",
+                    "React Native",
+                    "Spring Boot",
+                    "SQL Server",
+                    "Security"
+                ]
+            }
+        },
+        "process": {
+            "title": "Our Development Process",
+            "step1": {
+                "title": "Requirements Analysis",
+                "description": "We work closely with clients to understand their business goals and specific requirements."
+            },
+            "step2": {
+                "title": "Planning & Design",
+                "description": "Our team creates detailed project plans and designs system architecture based on requirements."
+            },
+            "step3": {
+                "title": "Development",
+                "description": "We follow agile development methodologies to ensure efficient and high-quality implementation."
+            },
+            "step4": {
+                "title": "Testing & QA",
+                "description": "Comprehensive testing is performed to ensure software quality, security, and performance."
+            },
+            "step5": {
+                "title": "Deployment",
+                "description": "We handle the deployment process with minimal disruption to your business operations."
+            },
+            "step6": {
+                "title": "Maintenance & Support",
+                "description": "Ongoing support and maintenance to ensure your software remains up-to-date and secure."
+            }
+        },
+        "callToAction": {
+            "title": "Ready to Start Your Project?",
+            "subtitle": "Contact us today to discuss how we can help transform your business with our software solutions.",
+            "button": "Contact Us Now"
+        },
+        "quality": "We strive for excellence, ensuring each project meets the highest standards and provides value that exceeds expectations.",
+        "innovation": "Innovation is our core driving force. We constantly explore new technologies to deliver cutting-edge solutions to our clients.",
+        "integrity": "Integrity is the foundation of our business. We always work with clients in a transparent and honest manner."
+    },
+    "contact": {
+        "title": "Contact Us",
+        "subtitle": "Feel free to contact us if you have any questions or cooperation intentions",
+        "form": {
+            "title": "Send Message",
+            "name": "Your Name",
+            "nameRequired": "Please enter your name",
+            "namePlaceholder": "Enter your name",
+            "phone": "Your Phone",
+            "phoneRequired": "Please enter your phone number",
+            "phonePlaceholder": "Enter your phone number",
+            "email": "Email",
+            "emailRequired": "Please enter your email",
+            "emailValid": "Please enter a valid email address",
+            "emailPlaceholder": "Enter your email address",
+            "company": "Company Name",
+            "companyPlaceholder": "Enter your company name",
+            "subject": "Subject",
+            "subjectRequired": "Please enter a subject",
+            "subjectPlaceholder": "Enter the subject of your message",
+            "message": "Your Message",
+            "messageRequired": "Please enter your message",
+            "messagePlaceholder": "Enter your message here",
+            "submit": "Send Message",
+            "successMessage": "Your message has been sent successfully. We will contact you soon."
+        },
+        "info": {
+            "title": "Contact Information",
+            "address": {
+                "title": "Address",
+                "line1": "Building 15, Zone B",
+                "line2": "Pudong New District, Zhang Jiang Hi-Tech Park, Shanghai"
+            },
+            "phone": {
+                "title": "Phone",
+                "number": "+86 21 5888 7777"
+            },
+            "email": {
+                "title": "Email",
+                "address": "info@wiscreation.com"
+            },
+            "hours": {
+                "title": "Working Hours",
+                "time": "Monday - Friday: 9:00 AM - 6:00 PM"
+            },
+            "aboutDesc": "Our team of experts is ready to help you with your software development needs and provide solutions tailored to your business requirements."
+        },
+        "locations": {
+            "title": "Our Locations"
+        },
+        "map": {
+            "placeholder": "Map Location (Interactive map will be displayed here)"
+        }
+    },
+    "auth": {
+        "login": {
+            "title": "Login",
+            "subtitle": "Log in to your account to access more features",
+            "email": "Email",
+            "emailRequired": "Please input your email",
+            "emailPlaceholder": "Enter your email",
+            "emailValid": "Please enter a valid email address",
+            "password": "Password",
+            "passwordRequired": "Please input your password",
+            "passwordPlaceholder": "Enter your password",
+            "remember": "Remember me",
+            "forgot": "Forgot password?",
+            "submit": "Login",
+            "register": "Register Now",
+            "noAccount": "Don't have an account?",
+            "success": "Login successful",
+            "demoHint": "This is a demo version, click the login button to enter directly"
+        },
+        "register": {
+            "title": "Create Account",
+            "subtitle": "Register an account to experience our services",
+            "username": "Username",
+            "usernameRequired": "Please input your username",
+            "usernameLength": "Username must be at least 3 characters",
+            "email": "Email",
+            "emailRequired": "Please input your email",
+            "emailValid": "Please enter a valid email address",
+            "password": "Password",
+            "passwordRequired": "Please input your password",
+            "passwordLength": "Password must be at least 6 characters",
+            "confirm": "Confirm Password",
+            "confirmRequired": "Please confirm your password",
+            "passwordMismatch": "The two passwords you entered do not match",
+            "agreement": "I have read and agree to the",
+            "terms": "Terms of Service",
+            "privacy": "Privacy Policy",
+            "agreementRequired": "Please read and agree to the terms",
+            "submit": "Register",
+            "login": "Login Now",
+            "hasAccount": "Already have an account?",
+            "successMsg": "Registration successful, please login"
+        },
+        "logout": {
+            "success": "Logged out successfully"
+        },
+        "demoUser": "Demo User"
+    },
+    "dashboard": {
+        "title": "Dashboard Overview",
+        "projects": "Total Projects",
+        "tasks": "Pending Tasks",
+        "completed": "Completed Tasks",
+        "members": "Team Members",
+        "progress": "Project Progress",
+        "activities": "Recent Activities"
+    },
+    "settings": {
+        "title": "System Settings",
+        "account": {
+            "title": "Account Settings",
+            "username": "Username",
+            "email": "Email",
+            "language": "Language",
+            "timezone": "Timezone",
+            "save": "Save Settings"
+        },
+        "security": {
+            "title": "Security Settings",
+            "password": {
+                "title": "Change Password",
+                "current": "Current Password",
+                "new": "New Password",
+                "confirm": "Confirm New Password"
+            },
+            "tfa": "Enable Two-Factor Authentication",
+            "notification": "Login Activity Notification"
+        },
+        "notification": {
+            "title": "Notification Settings",
+            "email": "Email Notifications",
+            "task": "Task Assignment",
+            "due": "Task Due Reminder",
+            "project": "Project Updates",
+            "system": "System Announcements",
+            "marketing": "Marketing Emails"
+        },
+        "ui": {
+            "title": "UI Settings",
+            "theme": "Theme",
+            "light": "Light",
+            "dark": "Dark",
+            "system": "System",
+            "density": "UI Density",
+            "default": "Default",
+            "middle": "Medium",
+            "compact": "Compact",
+            "menu": "Menu Mode",
+            "inline": "Inline",
+            "horizontal": "Horizontal",
+            "dashboard": "Dashboard Layout",
+            "custom": "Custom"
+        }
+    },
+    "projects": {
+        "title": "Project Management",
+        "search": "Search projects...",
+        "all": "All",
+        "inProgress": "In Progress",
+        "completed": "Completed",
+        "notStarted": "Not Started",
+        "delayed": "Delayed",
+        "grid": "Grid View",
+        "list": "List View",
+        "new": "New Project",
+        "filter": {
+            "myProjects": "My Projects"
+        },
+        "card": {
+            "progress": "Progress",
+            "date": "to",
+            "tasks": "Tasks"
+        },
+        "actions": {
+            "details": "View Details",
+            "team": "View Team",
+            "complete": "Mark as Completed",
+            "manage": "Manage Team",
+            "docs": "Project Documents",
+            "delete": "Delete Project"
+        }
+    },
+    "tasks": {
+        "title": "Task Management",
+        "search": "Search tasks...",
+        "all": "All Projects",
+        "filter": {
+            "assignedToMe": "Assigned to Me"
+        },
+        "status": {
+            "all": "All Status",
+            "completed": "Completed",
+            "inProgress": "In Progress",
+            "notStarted": "Not Started",
+            "delayed": "Delayed"
+        },
+        "date": {
+            "start": "Start Date",
+            "end": "End Date"
+        },
+        "new": "New Task",
+        "columns": {
+            "id": "ID",
+            "title": "Task Name",
+            "project": "Project",
+            "assignee": "Assignee",
+            "priority": "Priority",
+            "status": "Status",
+            "dueDate": "Due Date",
+            "actions": "Actions"
+        },
+        "actions": {
+            "view": "View",
+            "edit": "Edit"
+        }
+    },
+    "common": {
+        "back": "Back to Home",
+        "loading": "Loading...",
+        "error": "Error",
+        "success": "Success",
+        "save": "Save",
+        "cancel": "Cancel",
+        "delete": "Delete",
+        "edit": "Edit",
+        "view": "View",
+        "submit": "Submit",
+        "or": "or",
+        "and": "and",
+        "learnMore": "Learn More",
+        "contactUs": "Contact Us"
+    },
+    "notFound": {
+        "message": "Sorry, the page you visited does not exist."
+    }
+}

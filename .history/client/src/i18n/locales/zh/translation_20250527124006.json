@@ -1,0 +1,500 @@
+{
+    "app": {
+        "title": "WisCreation",
+        "subtitle": "企业网站与SaaS解决方案"
+    },
+    "nav": {
+        "home": "首页",
+        "about": "关于我们",
+        "services": "服务与产品",
+        "contact": "联系我们",
+        "saas": "SaaS应用",
+        "login": "登录",
+        "register": "注册",
+        "logout": "退出登录",
+        "saasConsole": "SaaS控制台",
+        "saasShort": "WC",
+        "dashboard": "控制面板",
+        "profile": "个人资料",
+        "settings": "系统设置",
+        "team": "团队成员",
+        "playground": "演示操场"
+    },
+    "footer": {
+        "quickLinks": "快速链接",
+        "contact": "联系方式",
+        "address": "上海市浦东新区张江高科技园区",
+        "newsletter": "订阅通讯",
+        "newsletterDesc": "订阅我们的通讯，获取最新产品和服务信息。",
+        "emailPlaceholder": "您的邮箱地址",
+        "subscribe": "订阅",
+        "rights": "保留所有权利。",
+        "privacy": "隐私政策",
+        "terms": "服务条款"
+    },
+    "home": {
+        "hero": {
+            "title": "数字化解决方案，助力企业创新",
+            "subtitle": "通过我们的软件产品和服务，帮助企业提高效率，降低成本，增强竞争力",
+            "cta": "了解更多"
+        },
+        "services": {
+            "title": "我们的服务",
+            "subtitle": "为您的业务提供全方位的软件解决方案"
+        },
+        "about": {
+            "title": "关于我们",
+            "subtitle": "专业的软件开发团队，为您提供优质服务",
+            "description": "WisCreation是一家专注于为企业提供软件解决方案的技术公司。我们拥有经验丰富的开发团队，专注于为客户提供高质量的软件产品和服务。"
+        },
+        "features": {
+            "saas": {
+                "title": "云端SaaS解决方案",
+                "description": "基于云的软件即服务解决方案，赋能您的业务"
+            }
+        },
+        "stats": {
+            "team": "专业团队",
+            "projects": "成功项目",
+            "clients": "客户数量",
+            "years": "企业年限",
+            "yearsSuffix": "年"
+        },
+        "callToAction": {
+            "button": "立即咨询"
+        }
+    },
+    "about": {
+        "title": "关于我们",
+        "subtitle": "了解WisCreation的发展历程与企业文化",
+        "intro": {
+            "title": "公司简介",
+            "content": "WisCreation成立于2018年，是一家专注于为企业提供软件解决方案的科技公司。我们的团队由一群充满激情和创新精神的技术专家组成，致力于通过技术的力量帮助企业实现数字化转型。"
+        },
+        "values": {
+            "title": "我们的核心价值观",
+            "teamwork": "团队协作",
+            "excellence": "卓越品质",
+            "innovation": "创新精神",
+            "integrity": "诚信正直"
+        },
+        "history": {
+            "title": "发展历程",
+            "milestones": {
+                "title": "重要里程碑",
+                "item1": "2010: 公司成立",
+                "item2": "2012: 获得第一个大型企业客户",
+                "item3": "2015: 成立移动应用开发部门",
+                "item4": "2018: 业务扩展至整个亚洲地区",
+                "item5": "2020: 推出WisCreation SaaS平台",
+                "item6": "2023: 被认可为行业领导者并获得多项奖项"
+            },
+            "milestone1": "我们的公司在上海成立，最初专注于为本地企业提供网站开发服务。",
+            "milestone2": "随着业务的发展，我们获得了第一个大型企业客户，并开始提供更广泛的软件开发服务。",
+            "milestone3": "为了满足日益增长的移动应用需求，我们成立了专门的移动应用开发团队。",
+            "milestone4": "我们的业务扩展到整个亚洲地区，在北京、东京和新加坡设立了办事处。",
+            "milestone5": "我们推出了自己的SaaS平台，为中小企业提供可扩展的云解决方案。",
+            "milestone6": "我们的努力得到了认可，被评为软件开发领域的行业领导者，并获得了多项技术创新奖项。"
+        },
+        "mission": {
+            "title": "我们的使命",
+            "description": "通过卓越的数字解决方案帮助企业成长。我们结合创新方法和最新技术，推动客户取得成功。"
+        },
+        "team": {
+            "description": "我们深信，团队协作是成功的关键。我们鼓励开放沟通和多元思维，共同创造卓越成果。"
+        },
+        "vision": {
+            "description": "我们的愿景是成为数字化转型前沿的领导者，帮助企业在竞争中脱颖而出并实现增长。"
+        }
+    },
+    "services": {
+        "title": "服务与产品",
+        "subtitle": "我们提供全方位的软件开发服务与创新的云端解决方案",
+        "main": {
+            "title": "我们的主要服务"
+        },
+        "custom": {
+            "title": "定制软件开发",
+            "description": "根据您的业务需求，为您量身定制的软件解决方案，从需求分析、设计开发到上线维护。"
+        },
+        "webDev": {
+            "features": [
+                "企业应用开发",
+                "电子商务解决方案",
+                "CRM与ERP系统",
+                "内容管理系统",
+                "Web门户开发"
+            ]
+        },
+        "saas": {
+            "title": "SaaS服务",
+            "description": "基于云的软件即服务解决方案，帮助企业降低IT成本，提高业务灵活性和可扩展性。"
+        },
+        "cloudSolutions": {
+            "features": [
+                "云迁移服务",
+                "SaaS产品开发",
+                "云基础设施管理",
+                "无服务器应用",
+                "可扩展云解决方案"
+            ]
+        },
+        "mobile": {
+            "title": "移动应用开发",
+            "description": "专业的移动应用开发服务，支持iOS和Android平台，为您的业务提供移动化解决方案。"
+        },
+        "mobileDev": {
+            "features": [
+                "原生iOS和Android应用",
+                "跨平台开发",
+                "移动UI/UX设计",
+                "应用维护和更新",
+                "移动应用优化"
+            ]
+        },
+        "security": {
+            "title": "网络安全服务",
+            "description": "为您的系统和数据提供全面的安全保障，包括安全评估、漏洞扫描、安全加固等服务。",
+            "features": [
+                "安全审计与评估",
+                "漏洞管理",
+                "合规解决方案",
+                "安全监控",
+                "事件响应"
+            ]
+        },
+        "specialization": {
+            "title": "我们的专业领域",
+            "enterprise": {
+                "title": "企业解决方案",
+                "description": "全面的企业级软件解决方案，为简化运营和推动业务增长量身定制。"
+            },
+            "data": {
+                "title": "数据管理",
+                "description": "先进的数据解决方案，包括大数据处理、数据仓库和商业智能系统。"
+            },
+            "ai": {
+                "title": "人工智能与机器学习",
+                "description": "前沿AI解决方案，用于自动化流程、从数据中获取洞察并增强决策制定。"
+            }
+        },
+        "techStacks": {
+            "title": "我们的技术栈",
+            "frontend": "前端",
+            "backend": "后端",
+            "database": "数据库",
+            "cloud": "云服务",
+            "mobile": "移动开发"
+        },
+        "caseStudies": {
+            "title": "案例研究",
+            "case1": {
+                "title": "企业办公自动化系统",
+                "description": "为一家大型制造企业开发的全面办公自动化解决方案，实现了工作流程数字化和业务流程优化。",
+                "tags": [
+                    "企业应用",
+                    "流程优化",
+                    "React",
+                    "Node.js",
+                    "微服务"
+                ]
+            },
+            "case2": {
+                "title": "电子商务移动应用",
+                "description": "为零售客户开发的跨平台移动电子商务应用，提供个性化购物体验和智能推荐功能。",
+                "tags": [
+                    "移动应用",
+                    "电子商务",
+                    "React Native",
+                    "Redux",
+                    "支付集成"
+                ]
+            },
+            "case3": {
+                "title": "云端数据分析平台",
+                "description": "基于云的大数据分析平台，帮助客户从海量数据中获取业务洞察和决策支持。",
+                "tags": [
+                    "数据分析",
+                    "云计算",
+                    "Python",
+                    "大数据",
+                    "人工智能"
+                ]
+            }
+        },
+        "process": {
+            "title": "我们的开发流程",
+            "step1": {
+                "title": "需求分析",
+                "description": "我们与客户密切合作，了解他们的业务目标和具体需求。"
+            },
+            "step2": {
+                "title": "规划与设计",
+                "description": "我们的团队根据需求创建详细的项目计划和系统架构设计。"
+            },
+            "step3": {
+                "title": "开发",
+                "description": "我们遵循敏捷开发方法，确保高效和高质量的实施。"
+            },
+            "step4": {
+                "title": "测试与质量保证",
+                "description": "进行全面的测试，确保软件质量、安全性和性能。"
+            },
+            "step5": {
+                "title": "部署",
+                "description": "我们处理部署过程，最大限度减少对您业务运营的影响。"
+            },
+            "step6": {
+                "title": "维护与支持",
+                "description": "持续的支持和维护，确保您的软件保持最新状态和安全性。"
+            }
+        },
+        "callToAction": {
+            "title": "准备好开始您的项目了吗？",
+            "subtitle": "今天就联系我们，讨论我们如何通过软件解决方案帮助您的业务转型。",
+            "button": "立即联系我们"
+        },
+        "quality": "我们追求卓越，确保每个项目都能达到最高标准，为客户提供超出期望的价值。",
+        "innovation": "创新是我们的核心驱动力，我们不断探索新技术，为客户提供前沿解决方案。",
+        "integrity": "诚信是我们业务的基石，我们始终以透明和诚实的方式与客户合作。"
+    },
+    "contact": {
+        "title": "联系我们",
+        "subtitle": "有任何问题或合作意向，欢迎随时与我们联系",
+        "form": {
+            "title": "发送消息",
+            "name": "您的姓名",
+            "nameRequired": "请输入您的姓名",
+            "namePlaceholder": "请输入您的姓名",
+            "phone": "您的电话",
+            "phoneRequired": "请输入您的电话号码",
+            "phonePlaceholder": "请输入您的电话号码",
+            "email": "电子邮箱",
+            "emailRequired": "请输入您的电子邮箱",
+            "emailValid": "请输入有效的电子邮箱地址",
+            "emailPlaceholder": "请输入您的电子邮箱",
+            "company": "公司名称",
+            "companyPlaceholder": "请输入您的公司名称",
+            "subject": "咨询项目",
+            "subjectRequired": "请输入咨询项目",
+            "subjectPlaceholder": "请输入咨询项目",
+            "message": "您的留言",
+            "messageRequired": "请输入您的留言",
+            "messagePlaceholder": "请在此输入您的留言",
+            "submit": "发送消息",
+            "successMessage": "您的消息已成功发送。我们将尽快与您联系。"
+        },
+        "info": {
+            "title": "联系信息",
+            "address": {
+                "title": "公司地址",
+                "line1": "B区15号楼",
+                "line2": "上海市浦东新区张江高科技园区"
+            },
+            "phone": {
+                "title": "联系电话",
+                "number": "+86 21 5888 7777"
+            },
+            "email": {
+                "title": "电子邮箱",
+                "address": "info@wiscreation.com"
+            },
+            "hours": {
+                "title": "工作时间",
+                "time": "周一至周五：上午9:00 - 下午6:00"
+            },
+            "aboutDesc": "我们的专业团队随时准备帮助您满足软件开发需求，并提供针对您业务需求的定制解决方案。"
+        },
+        "locations": {
+            "title": "我们的位置"
+        },
+        "map": {
+            "placeholder": "地图位置（这里将显示交互式地图）"
+        }
+    },
+    "auth": {
+        "login": {
+            "title": "用户登录",
+            "subtitle": "登录您的账户，访问更多功能",
+            "email": "邮箱",
+            "emailRequired": "请输入您的邮箱",
+            "emailPlaceholder": "请输入邮箱",
+            "emailValid": "请输入有效的邮箱地址",
+            "password": "密码",
+            "passwordRequired": "请输入您的密码",
+            "passwordPlaceholder": "请输入密码",
+            "remember": "记住我",
+            "forgot": "忘记密码？",
+            "submit": "登录",
+            "register": "立即注册",
+            "noAccount": "还没有账号？",
+            "success": "登录成功",
+            "demoHint": "这是演示版本，点击登录按钮直接进入"
+        },
+        "register": {
+            "title": "创建账户",
+            "subtitle": "注册账户，体验我们的服务",
+            "username": "用户名",
+            "usernameRequired": "请输入您的用户名",
+            "usernameLength": "用户名至少3个字符",
+            "email": "邮箱",
+            "emailRequired": "请输入您的邮箱",
+            "emailValid": "请输入有效的邮箱地址",
+            "password": "密码",
+            "passwordRequired": "请输入您的密码",
+            "passwordLength": "密码至少6个字符",
+            "confirm": "确认密码",
+            "confirmRequired": "请确认您的密码",
+            "passwordMismatch": "两次输入的密码不一致",
+            "agreement": "我已阅读并同意",
+            "terms": "服务条款",
+            "privacy": "隐私政策",
+            "agreementRequired": "请阅读并同意条款",
+            "submit": "注册",
+            "login": "立即登录",
+            "hasAccount": "已有账号？",
+            "successMsg": "注册成功，请登录"
+        },
+        "logout": {
+            "success": "已退出登录"
+        },
+        "demoUser": "演示用户"
+    },
+    "dashboard": {
+        "title": "仪表盘概览",
+        "projects": "总项目数",
+        "tasks": "待办任务",
+        "completed": "已完成任务",
+        "members": "团队成员",
+        "progress": "项目进度",
+        "activities": "最近活动"
+    },
+    "settings": {
+        "title": "系统设置",
+        "account": {
+            "title": "账户设置",
+            "username": "用户名",
+            "email": "电子邮箱",
+            "language": "语言",
+            "timezone": "时区",
+            "save": "保存设置"
+        },
+        "security": {
+            "title": "安全设置",
+            "password": {
+                "title": "修改密码",
+                "current": "当前密码",
+                "new": "新密码",
+                "confirm": "确认新密码"
+            },
+            "tfa": "启用两步验证",
+            "notification": "登录活动通知"
+        },
+        "notification": {
+            "title": "通知设置",
+            "email": "电子邮件通知",
+            "task": "任务分配",
+            "due": "任务截止提醒",
+            "project": "项目更新",
+            "system": "系统公告",
+            "marketing": "营销邮件"
+        },
+        "ui": {
+            "title": "界面设置",
+            "theme": "主题",
+            "light": "浅色",
+            "dark": "深色",
+            "system": "跟随系统",
+            "density": "界面密度",
+            "default": "默认",
+            "middle": "中等",
+            "compact": "紧凑",
+            "menu": "菜单模式",
+            "inline": "内嵌",
+            "horizontal": "水平",
+            "dashboard": "仪表盘布局",
+            "custom": "自定义"
+        }
+    },
+    "projects": {
+        "title": "项目管理",
+        "search": "搜索项目...",
+        "all": "全部",
+        "inProgress": "进行中",
+        "completed": "已完成",
+        "notStarted": "未开始",
+        "delayed": "延期",
+        "grid": "网格视图",
+        "list": "列表视图",
+        "new": "新建项目",
+        "filter": {
+            "myProjects": "我的项目"
+        },
+        "card": {
+            "progress": "进度",
+            "date": "至",
+            "tasks": "任务"
+        },
+        "actions": {
+            "details": "查看详情",
+            "team": "查看团队",
+            "complete": "标记为已完成",
+            "manage": "管理团队",
+            "docs": "项目文档",
+            "delete": "删除项目"
+        }
+    },
+    "tasks": {
+        "title": "任务管理",
+        "search": "搜索任务...",
+        "all": "所有项目",
+        "filter": {
+            "assignedToMe": "我的任务"
+        },
+        "status": {
+            "all": "所有状态",
+            "completed": "已完成",
+            "inProgress": "进行中",
+            "notStarted": "未开始",
+            "delayed": "延期"
+        },
+        "date": {
+            "start": "开始日期",
+            "end": "结束日期"
+        },
+        "new": "新建任务",
+        "columns": {
+            "id": "ID",
+            "title": "任务名称",
+            "project": "所属项目",
+            "assignee": "负责人",
+            "priority": "优先级",
+            "status": "状态",
+            "dueDate": "截止日期",
+            "actions": "操作"
+        },
+        "actions": {
+            "view": "查看",
+            "edit": "编辑"
+        }
+    },
+    "common": {
+        "back": "返回首页",
+        "loading": "加载中...",
+        "error": "出错了",
+        "success": "操作成功",
+        "save": "保存",
+        "cancel": "取消",
+        "delete": "删除",
+        "edit": "编辑",
+        "view": "查看",
+        "submit": "提交",
+        "or": "或者",
+        "and": "和",
+        "learnMore": "了解更多",
+        "contactUs": "联系我们"
+    },
+    "notFound": {
+        "message": "对不起，您访问的页面不存在。"
+    }
+}

@@ -1,0 +1,294 @@
+{
+    "app": {
+        "title": "WisCreation",
+        "subtitle": "企業網站與SaaS解決方案"
+    },
+    "nav": {
+        "home": "首頁",
+        "about": "關於我們",
+        "services": "服務與產品",
+        "contact": "聯繫我們",
+        "saas": "SaaS應用",
+        "login": "登入",
+        "register": "註冊",
+        "logout": "退出登入",
+        "playground": "演示操場"
+    },
+    "footer": {
+        "quickLinks": "快速鏈接",
+        "contact": "聯繫方式",
+        "address": "上海市浦東新區張江高科技園區",
+        "newsletter": "訂閱通訊",
+        "newsletterDesc": "訂閱我們的通訊，獲取最新產品和服務資訊。",
+        "emailPlaceholder": "您的郵箱地址",
+        "subscribe": "訂閱",
+        "rights": "保留所有權利。",
+        "privacy": "隱私政策",
+        "terms": "服務條款"
+    },
+    "home": {
+        "hero": {
+            "title": "數位化解決方案，助力企業創新",
+            "subtitle": "通過我們的軟體產品和服務，幫助企業提高效率，降低成本，增強競爭力",
+            "cta": "了解更多"
+        },
+        "services": {
+            "title": "我們的服務",
+            "subtitle": "為您的業務提供全方位的軟體解決方案"
+        },
+        "about": {
+            "title": "關於我們",
+            "subtitle": "專業的軟體開發團隊，為您提供優質服務",
+            "description": "WisCreation是一家專注於為企業提供軟體解決方案的技術公司。我們擁有經驗豐富的開發團隊，專注於為客戶提供高質量的軟體產品和服務。"
+        },
+        "features": {
+            "saas": {
+                "title": "雲端SaaS解決方案",
+                "description": "基於雲的軟體即服務解決方案，賦能您的業務"
+            }
+        },
+        "stats": {
+            "team": "專業團隊",
+            "projects": "成功項目",
+            "clients": "客戶數量",
+            "years": "企業年限",
+            "yearsSuffix": "年"
+        },
+        "callToAction": {
+            "button": "立即諮詢"
+        }
+    },
+    "about": {
+        "title": "關於我們",
+        "subtitle": "了解WisCreation的發展歷程與企業文化",
+        "intro": {
+            "title": "公司簡介",
+            "content": "WisCreation成立於2018年，是一家專注於為企業提供軟體解決方案的科技公司。我們的團隊由一群充滿激情和創新精神的技術專家組成，致力於通過技術的力量幫助企業實現數位化轉型。"
+        },
+        "values": {
+            "title": "我們的核心價值觀",
+            "teamwork": "團隊協作",
+            "excellence": "卓越品質",
+            "innovation": "創新精神",
+            "integrity": "誠信正直"
+        },
+        "history": {
+            "title": "發展歷程"
+        },
+        "vision": {
+            "description": "我們的願景是成為數位化轉型前沿的領導者，幫助企業在競爭中脫穎而出並實現增長。"
+        }
+    },
+    "services": {
+        "title": "服務與產品",
+        "subtitle": "我們提供全方位的軟體開發服務與創新的雲端解決方案",
+        "custom": {
+            "title": "定制軟體開發",
+            "description": "根據您的業務需求，為您量身定制的軟體解決方案，從需求分析、設計開發到上線維護。"
+        },
+        "saas": {
+            "title": "SaaS服務",
+            "description": "基於雲的軟體即服務解決方案，幫助企業降低IT成本，提高業務靈活性和可擴展性。"
+        },
+        "mobile": {
+            "title": "移動應用開發",
+            "description": "專業的移動應用開發服務，支持iOS和Android平台，為您的業務提供移動化解決方案。"
+        },
+        "security": {
+            "title": "網絡安全服務",
+            "description": "為您的系統和數據提供全面的安全保障，包括安全評估、漏洞掃描、安全加固等服務。"
+        }
+    },
+    "contact": {
+        "title": "聯繫我們",
+        "subtitle": "有任何問題或合作意向，歡迎隨時與我們聯繫",
+        "form": {
+            "title": "發送訊息",
+            "name": "您的姓名",
+            "phone": "您的電話",
+            "email": "電子郵箱",
+            "company": "公司名稱",
+            "subject": "諮詢項目",
+            "message": "您的留言",
+            "submit": "發送訊息"
+        },
+        "info": {
+            "title": "聯繫資訊",
+            "address": "公司地址",
+            "phone": "聯繫電話",
+            "email": "電子郵箱",
+            "hours": "工作時間"
+        }
+    },
+    "auth": {
+        "login": {
+            "title": "用戶登入",
+            "subtitle": "登入您的賬戶，訪問更多功能",
+            "email": "郵箱",
+            "emailRequired": "請輸入您的郵箱",
+            "emailValid": "請輸入有效的郵箱地址",
+            "password": "密碼",
+            "passwordRequired": "請輸入您的密碼",
+            "remember": "記住我",
+            "forgot": "忘記密碼？",
+            "submit": "登入",
+            "register": "立即註冊",
+            "noAccount": "還沒有賬號？"
+        },
+        "register": {
+            "title": "創建賬戶",
+            "subtitle": "註冊賬戶，體驗我們的服務",
+            "username": "用戶名",
+            "usernameRequired": "請輸入您的用戶名",
+            "usernameLength": "用戶名至少3個字符",
+            "email": "郵箱",
+            "emailRequired": "請輸入您的郵箱",
+            "emailValid": "請輸入有效的郵箱地址",
+            "password": "密碼",
+            "passwordRequired": "請輸入您的密碼",
+            "passwordLength": "密碼至少6個字符",
+            "confirm": "確認密碼",
+            "confirmRequired": "請確認您的密碼",
+            "passwordMismatch": "兩次輸入的密碼不一致",
+            "agreement": "我已閱讀並同意",
+            "terms": "服務條款",
+            "privacy": "隱私政策",
+            "agreementRequired": "請閱讀並同意條款",
+            "submit": "註冊",
+            "login": "立即登入",
+            "hasAccount": "已有賬號？",
+            "successMsg": "註冊成功，請登入"
+        }
+    },
+    "dashboard": {
+        "title": "儀表板概覽",
+        "projects": "總項目數",
+        "tasks": "待辦任務",
+        "completed": "已完成任務",
+        "members": "團隊成員",
+        "progress": "項目進度",
+        "activities": "最近活動"
+    },
+    "settings": {
+        "title": "系統設置",
+        "account": {
+            "title": "賬戶設置",
+            "username": "用戶名",
+            "email": "電子郵箱",
+            "language": "語言",
+            "timezone": "時區",
+            "save": "保存設置"
+        },
+        "security": {
+            "title": "安全設置",
+            "password": {
+                "title": "修改密碼",
+                "current": "當前密碼",
+                "new": "新密碼",
+                "confirm": "確認新密碼"
+            },
+            "tfa": "啟用雙重認證",
+            "notification": "登入活動通知"
+        },
+        "notification": {
+            "title": "通知設置",
+            "email": "電子郵件通知",
+            "task": "任務分配",
+            "due": "任務截止提醒",
+            "project": "項目更新",
+            "system": "系統公告",
+            "marketing": "營銷郵件"
+        },
+        "ui": {
+            "title": "界面設置",
+            "theme": "主題",
+            "light": "淺色",
+            "dark": "深色",
+            "system": "跟隨系統",
+            "density": "界面密度",
+            "default": "默認",
+            "middle": "中等",
+            "compact": "緊湊",
+            "menu": "菜單模式",
+            "inline": "內嵌",
+            "horizontal": "水平",
+            "dashboard": "儀表板佈局",
+            "custom": "自定義"
+        }
+    },
+    "projects": {
+        "title": "項目管理",
+        "search": "搜索項目...",
+        "all": "全部",
+        "inProgress": "進行中",
+        "completed": "已完成",
+        "notStarted": "未開始",
+        "delayed": "延期",
+        "grid": "網格視圖",
+        "list": "列表視圖",
+        "new": "新建項目",
+        "card": {
+            "progress": "進度",
+            "date": "至",
+            "tasks": "任務"
+        },
+        "actions": {
+            "details": "查看詳情",
+            "team": "查看團隊",
+            "complete": "標記為已完成",
+            "manage": "管理團隊",
+            "docs": "項目文檔",
+            "delete": "刪除項目"
+        }
+    },
+    "tasks": {
+        "title": "任務管理",
+        "search": "搜索任務...",
+        "all": "所有項目",
+        "status": {
+            "all": "所有狀態",
+            "completed": "已完成",
+            "inProgress": "進行中",
+            "notStarted": "未開始",
+            "delayed": "延期"
+        },
+        "date": {
+            "start": "開始日期",
+            "end": "結束日期"
+        },
+        "new": "新建任務",
+        "columns": {
+            "id": "ID",
+            "title": "任務名稱",
+            "project": "所屬項目",
+            "assignee": "負責人",
+            "priority": "優先級",
+            "status": "狀態",
+            "dueDate": "截止日期",
+            "actions": "操作"
+        },
+        "actions": {
+            "view": "查看",
+            "edit": "編輯"
+        }
+    },
+    "common": {
+        "back": "返回首頁",
+        "loading": "加載中...",
+        "error": "出錯了",
+        "success": "操作成功",
+        "save": "保存",
+        "cancel": "取消",
+        "delete": "刪除",
+        "edit": "編輯",
+        "view": "查看",
+        "submit": "提交",
+        "or": "或者",
+        "and": "和",
+        "learnMore": "了解更多",
+        "contactUs": "聯繫我們"
+    },
+    "notFound": {
+        "message": "對不起，您訪問的頁面不存在。"
+    }
+}
