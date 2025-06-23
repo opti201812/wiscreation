@@ -9,7 +9,7 @@ const valueOptions = [
     { value: 'json', label: 'JSON' },
 ];
 
-const EncodeTab = ({ onAddOutput, token }) => {
+const EncodeTab = ({ onAddOutput, token, type }) => {
     const [loading, setLoading] = useState(false);
 
     const onFinish = async (values) => {
@@ -18,7 +18,7 @@ const EncodeTab = ({ onAddOutput, token }) => {
             if (onAddOutput) {
                 onAddOutput({
                     label: 'Encode Error',
-                    value: '请先编译Schema，获取token后再进行编码操作！'
+                    value: 'Please compile the Schema first, get the token, and then perform the encoding operation!'
                 });
             }
             return;
@@ -51,7 +51,7 @@ const EncodeTab = ({ onAddOutput, token }) => {
             }
             const data = await res.json();
             setLoading(false);
-            message.success('编码成功');
+            message.success('Encode Success');
             if (onAddOutput) {
                 onAddOutput({
                     label: 'Encode Result',
@@ -60,11 +60,12 @@ const EncodeTab = ({ onAddOutput, token }) => {
             }
         } catch (e) {
             setLoading(false);
-            message.error('编码失败');
+            message.error('Encode Error');
+            console.error(e.message);
             if (onAddOutput) {
                 onAddOutput({
                     label: 'Encode Error',
-                    value: '编码请求失败'
+                    value: 'Encode Error'
                 });
             }
         }
@@ -77,7 +78,7 @@ const EncodeTab = ({ onAddOutput, token }) => {
                 onFinish={onFinish}
                 initialValues={{
                     valueType: 'json',
-                    type: '',
+                    type: type,
                     valueText: ''
                 }}
             >
@@ -88,7 +89,7 @@ const EncodeTab = ({ onAddOutput, token }) => {
                         ))}
                     </Select>
                 </Form.Item>
-                <Form.Item label="Type:" name="type" style={{ marginBottom: 16 }}>
+                <Form.Item label="Type:" name="type" style={{ marginBottom: 16 }} rules={[{ required: true, message: 'Please select a type' }]}>
                     <Input placeholder="please input type..." />
                 </Form.Item>
                 <div style={{ marginBottom: 8, color: '#888', fontSize: 13 }}>

@@ -3,10 +3,10 @@ export function getApiBaseUrl() {
     // 你可以根据实际情况调整判断条件
     if (process.env.NODE_ENV === 'production') {
         // 生产环境
-        return 'http://wiscreationsoft.com:4500';
+        return 'https://wiscreationsoft.com:1080/api';
     } else {
         // 开发环境
-        return 'http://192.168.3.31:8000';
+        return 'http://localhost.com:1080/api';
     }
 }
 

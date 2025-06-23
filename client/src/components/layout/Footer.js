@@ -84,17 +84,17 @@ const Footer = () => {
                             {t('footer.contact')}
                         </Title>
                         <ul style={{ listStyle: 'none', padding: 0 }}>
-                            <li style={{ marginBottom: 10, color: 'rgba(255, 255, 255, 0.65)' }}>
+                            <li style={{ marginBottom: 10, color: 'rgba(255, 255, 255, 0.65)', display: 'none' }}>
                                 <EnvironmentOutlined style={{ marginRight: 8 }} />
                                 {t('footer.address')}
                             </li>
-                            <li style={{ marginBottom: 10, color: 'rgba(255, 255, 255, 0.65)' }}>
+                            <li style={{ marginBottom: 10, color: 'rgba(255, 255, 255, 0.65)', display: 'none' }}>
                                 <PhoneOutlined style={{ marginRight: 8 }} />
                                 +86 123 4567 8910
                             </li>
                             <li style={{ color: 'rgba(255, 255, 255, 0.65)' }}>
                                 <MailOutlined style={{ marginRight: 8 }} />
-                                contact@wiscreation.com
+                                contact@wiscreationsoft.com
                             </li>
                         </ul>
                     </Col>

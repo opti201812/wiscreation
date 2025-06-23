@@ -25,9 +25,11 @@ yarn-debug.log
 /dist/
 /build/
 
+# 日志文件
 logs/
 *.log
 
+# IDE和编辑器
 .idea/
 .vscode/
 *.swp
@@ -41,3 +43,4 @@ logs/
 *.bak
 
 *.sqlite
+.history

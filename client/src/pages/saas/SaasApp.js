@@ -13,13 +13,10 @@ import {
 import {
     UserOutlined,
     LogoutOutlined,
-    DashboardOutlined,
-    TeamOutlined,
     SettingOutlined,
     MenuFoldOutlined,
     MenuUnfoldOutlined,
     AppstoreOutlined,
-    FileTextOutlined,
     BellOutlined,
 } from '@ant-design/icons';
 import { useTranslation } from 'react-i18next';
@@ -112,7 +109,7 @@ const SaasApp = () => {
 
     // 获取当前路径，用于菜单高亮
     const pathSnippets = location.pathname.split('/').filter(i => i);
-    const currentPath = pathSnippets.length > 1 ? pathSnippets[1] : 'dashboard';
+    const currentPath = pathSnippets.length > 1 ? pathSnippets[1] : 'playground';
 
     // 面包屑导航
     const breadcrumbItems = pathSnippets.map((_, index) => {
@@ -153,6 +150,7 @@ const SaasApp = () => {
                     position: 'sticky',
                     top: 0,
                     left: 0,
+                    display: 'none',
                 }}
             >
                 <div style={{ height: '64px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -170,7 +168,7 @@ const SaasApp = () => {
                     <Menu.Item key="playground" icon={<AppstoreOutlined />}>
                         <Link to="/app/playground">{t('nav.playground')}</Link>
                     </Menu.Item>
-                    <Menu.Item key="dashboard" icon={<DashboardOutlined />}>
+                    {/* <Menu.Item key="dashboard" icon={<DashboardOutlined />}>
                         <Link to="/app/dashboard">{t('nav.dashboard')}</Link>
                     </Menu.Item>
                     <Menu.SubMenu key="tasks" icon={<FileTextOutlined />} title={t('tasks.title')}>
@@ -194,7 +192,7 @@ const SaasApp = () => {
                     </Menu.Item>
                     <Menu.Item key="settings" icon={<SettingOutlined />}>
                         <Link to="/app/settings">{t('nav.settings')}</Link>
-                    </Menu.Item>
+                    </Menu.Item> */}
                 </Menu>
             </Sider>
 
@@ -213,9 +211,11 @@ const SaasApp = () => {
                         type="text"
                         icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
                         onClick={() => setCollapsed(!collapsed)}
-                        style={{ marginRight: 16 }}
+                        style={{ marginRight: 16, display: 'none' }}
                     />
-
+                    <Typography.Title level={3} style={{ margin: 0, color: 'rgba(0, 0, 0, 0.7)' }}>
+                        {t('nav.saasConsole')}
+                    </Typography.Title>
                     <div style={{ flex: 1 }} />
 
                     <div style={{ display: 'flex', alignItems: 'center' }}>
@@ -235,7 +235,7 @@ const SaasApp = () => {
                 </Header>
 
                 <Content style={{ margin: '16px' }}>
-                    <Breadcrumb style={{ marginBottom: '16px' }}>
+                    <Breadcrumb style={{ marginBottom: '16px', display: 'none' }}>
                         <Breadcrumb.Item><Link to="/">{t('nav.home')}</Link></Breadcrumb.Item>
                         <Breadcrumb.Item><Link to="/app">{t('nav.saas')}</Link></Breadcrumb.Item>
                         {breadcrumbItems}
@@ -243,7 +243,7 @@ const SaasApp = () => {
 
                     <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
                         <Routes>
-                            <Route path="/" element={<Dashboard />} />
+                            <Route path="/" element={<Playground />} />
                             <Route path="/playground" element={<Playground />} />
                             <Route path="/dashboard" element={<Dashboard />} />
                             <Route path="/profile" element={<Profile />} />

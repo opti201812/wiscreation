@@ -19,7 +19,7 @@ const radioOptions = [
     { value: 'CUPER', label: 'CUPER', disabled: true },
 ];
 
-const DecodeTab = ({ onAddOutput, token }) => {
+const DecodeTab = ({ onAddOutput, token, type }) => {
     const [loading, setLoading] = useState(false);
 
     const onFinish = async (values) => {
@@ -27,7 +27,7 @@ const DecodeTab = ({ onAddOutput, token }) => {
             if (onAddOutput) {
                 onAddOutput({
                     label: 'Decode Error',
-                    value: '请先编译Schema，获取token后再进行解码操作！'
+                    value: 'Please compile the Schema first, get the token, and then perform the decoding operation!'
                 });
             }
             return;
@@ -48,7 +48,7 @@ const DecodeTab = ({ onAddOutput, token }) => {
             });
             const data = await res.json();
             setLoading(false);
-            message.success('解码成功');
+            message.success('Decode Success');
             if (onAddOutput) {
                 onAddOutput({
                     label: 'Decode Result',
@@ -57,11 +57,11 @@ const DecodeTab = ({ onAddOutput, token }) => {
             }
         } catch (e) {
             setLoading(false);
-            message.error('解码失败');
+            message.error('Decode Error');
             if (onAddOutput) {
                 onAddOutput({
                     label: 'Decode Error',
-                    value: '解码请求失败'
+                    value: 'Decode Error'
                 });
             }
         }
@@ -73,7 +73,7 @@ const DecodeTab = ({ onAddOutput, token }) => {
             onFinish={onFinish}
             initialValues={{
                 dataType: 'hex',
-                type: '',
+                type: type,
                 decodeText: '',
                 radio: 'BER'
             }}
@@ -108,7 +108,7 @@ const DecodeTab = ({ onAddOutput, token }) => {
                 >
                     <TextArea
                         rows={17}
-                        placeholder="请输入HEX或Base64数据..."
+                        placeholder="Please input HEX or Base64 data..."
                         style={{ resize: 'vertical' }}
                     />
                 </Form.Item>

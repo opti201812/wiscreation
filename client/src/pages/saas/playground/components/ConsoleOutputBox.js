@@ -45,8 +45,8 @@ const ConsoleOutputBox = ({ outputs = [] }) => {
                         key={item.label + idx}
                         label={item.label}
                         value={item.value}
-                        onCopy={handleCopy}
-                        onDownload={handleDownload}
+                        onCopy={() => handleCopy(item.value)}
+                        onDownload={() => handleDownload(item.value, item.label)}
                     />
                 ))}
             </div>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { ConfigProvider } from 'antd';
 import zhCN from 'antd/lib/locale/zh_CN';
 import enUS from 'antd/lib/locale/en_US';
@@ -53,6 +53,42 @@ const getBrowserLanguage = () => {
     return 'zh'; // 默认使用中文
 };
 
+function AppContent({ i18n, handleLanguageChange }) {
+    const location = useLocation();
+    const hideHeader = location.pathname.startsWith('/app');
+
+    return (
+        <div className="app">
+            {!hideHeader && (
+                <Header onLanguageChange={handleLanguageChange} currentLanguage={i18n.language} />
+            )}
+            <main className="main-content">
+                <Routes>
+                    {/* 企业网站路由 */}
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/services" element={<Services />} />
+                    <Route path="/contact" element={<Contact />} />
+
+                    {/* 认证路由 */}
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/register" element={<Register />} />
+
+                    {/* 用户面板 */}
+                    <Route path="/dashboard/*" element={<Dashboard />} />
+
+                    {/* SaaS应用 */}
+                    <Route path="/app/*" element={<SaasApp />} />
+
+                    {/* 404页面 */}
+                    <Route path="*" element={<NotFound />} />
+                </Routes>
+            </main>
+            <Footer />
+        </div>
+    );
+}
+
 function App() {
     const { i18n } = useTranslation();
     const [locale, setLocale] = useState(zhCN);
@@ -65,10 +101,11 @@ function App() {
         if (!savedLanguage) {
             const detectedLanguage = getBrowserLanguage();
             i18n.changeLanguage(detectedLanguage);
+            localStorage.setItem('i18nextLng', detectedLanguage);
         }
     }, [i18n]);
 
-    // 监听语言变化，更新Antd的locale
+    // 监听语言变化，动态切换Antd的locale
     useEffect(() => {
         setLocale(localeMap[i18n.language] || zhCN);
     }, [i18n.language]);
@@ -82,32 +119,7 @@ function App() {
     return (
         <ConfigProvider locale={locale}>
             <Router>
-                <div className="app">
-                    <Header onLanguageChange={handleLanguageChange} currentLanguage={i18n.language} />
-                    <main className="main-content">
-                        <Routes>
-                            {/* 企业网站路由 */}
-                            <Route path="/" element={<Home />} />
-                            <Route path="/about" element={<About />} />
-                            <Route path="/services" element={<Services />} />
-                            <Route path="/contact" element={<Contact />} />
-
-                            {/* 认证路由 */}
-                            <Route path="/login" element={<Login />} />
-                            <Route path="/register" element={<Register />} />
-
-                            {/* 用户面板 */}
-                            <Route path="/dashboard/*" element={<Dashboard />} />
-
-                            {/* SaaS应用 */}
-                            <Route path="/app/*" element={<SaasApp />} />
-
-                            {/* 404页面 */}
-                            <Route path="*" element={<NotFound />} />
-                        </Routes>
-                    </main>
-                    <Footer />
-                </div>
+                <AppContent i18n={i18n} handleLanguageChange={handleLanguageChange} />
             </Router>
         </ConfigProvider>
     );

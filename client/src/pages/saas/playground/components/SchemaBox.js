@@ -26,7 +26,7 @@ BEGIN
   }
 END`;
 
-const SchemaBox = ({ onAddOutput, onSetToken }) => {
+const SchemaBox = ({ onAddOutput, onSetToken: onSetTokenAndType }) => {
     const [form] = Form.useForm();
     const [loading, setLoading] = useState(false);
 
@@ -44,9 +44,9 @@ const SchemaBox = ({ onAddOutput, onSetToken }) => {
             });
             const data = await res.json();
             setLoading(false);
-            message.success('提交成功');
-            if (onSetToken && data.token) {
-                onSetToken(data.token);
+            message.success('Compile Success');
+            if (onSetTokenAndType && data.token) {
+                onSetTokenAndType(data.token, data.type);
             }
             if (onAddOutput) {
                 onAddOutput({
@@ -56,12 +56,13 @@ const SchemaBox = ({ onAddOutput, onSetToken }) => {
             }
         } catch (e) {
             setLoading(false);
-            message.error('提交失败');
+            message.error('Compile Error');
+            console.error(e.message);
         }
     };
 
     return (
-        <div style={{ background: '#fafbfc', border: '1px solid #eee', borderRadius: 8, padding: 16 }}>
+        <div style={{ background: '#fafbfc', border: '1px solid #eee', borderRadius: 8, padding: 24, height: 550 }}>
             <Form
                 form={form}
                 layout="vertical"

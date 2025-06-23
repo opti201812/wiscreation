@@ -19,7 +19,7 @@ const OutputBlock = ({ label, value, onCopy, onDownload }) => (
         }}>
             <span style={{ color: '#fff', fontWeight: 500 }}>{label}</span>
             <span>
-                <Tooltip title="复制">
+                <Tooltip title="Copy">
                     <Button
                         type="text"
                         size="small"
@@ -28,7 +28,7 @@ const OutputBlock = ({ label, value, onCopy, onDownload }) => (
                         style={{ color: '#b5f5ec' }}
                     />
                 </Tooltip>
-                <Tooltip title="下载">
+                <Tooltip title="Download">
                     <Button
                         type="text"
                         size="small"
