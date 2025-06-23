@@ -111,7 +111,7 @@ const EncodeTab = ({ onAddOutput, token, type }) => {
                         }
                     ]}
                 >
-                    <TextArea rows={13} placeholder="please input value in JER(JSON) format..." />
+                    <TextArea rows={14} placeholder="please input value in JER(JSON) format..." />
                 </Form.Item>
                 <Button
                     type="primary"

@@ -62,7 +62,7 @@ const SchemaBox = ({ onAddOutput, onSetToken: onSetTokenAndType }) => {
     };
 
     return (
-        <div style={{ background: '#fafbfc', border: '1px solid #eee', borderRadius: 8, padding: 24, height: 550 }}>
+        <div style={{ background: '#fafbfc', border: '1px solid #eee', borderRadius: 8, padding: 24 }}>
             <Form
                 form={form}
                 layout="vertical"
