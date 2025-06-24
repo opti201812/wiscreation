@@ -19,7 +19,7 @@ const radioOptions = [
     { value: 'CUPER', label: 'CUPER', disabled: true },
 ];
 
-const DecodeTab = ({ onAddOutput, token, type }) => {
+const DecodeTab = ({ onAddOutput, token, typeAssignments }) => {
     const [loading, setLoading] = useState(false);
 
     const onFinish = async (values) => {
@@ -73,7 +73,7 @@ const DecodeTab = ({ onAddOutput, token, type }) => {
             onFinish={onFinish}
             initialValues={{
                 dataType: 'hex',
-                type: type,
+                type: '',
                 decodeText: '',
                 radio: 'BER'
             }}
@@ -95,7 +95,17 @@ const DecodeTab = ({ onAddOutput, token, type }) => {
                     name="type"
                     style={{ flex: 1, marginBottom: 0 }}
                 >
-                    <Input placeholder="please input type..." />
+                    <Select placeholder="please input type...">
+                        {Array.isArray(typeAssignments) && typeAssignments.length > 0 ? (
+                            typeAssignments.map((item) => (
+                                <Option key={item} value={item}>{item}</Option>
+                            ))
+                        ) : (
+                            <Option value="" disabled>
+                                No available types
+                            </Option>
+                        )}
+                    </Select>
                 </Form.Item>
             </div>
             <div style={{ marginBottom: 8, color: '#888', fontSize: 13 }}>

@@ -26,7 +26,7 @@ BEGIN
   }
 END`;
 
-const SchemaBox = ({ onAddOutput, onSetToken: onSetTokenAndType }) => {
+const SchemaBox = ({ onAddOutput, onSetTokenAndType }) => {
     const [form] = Form.useForm();
     const [loading, setLoading] = useState(false);
 
@@ -46,7 +46,7 @@ const SchemaBox = ({ onAddOutput, onSetToken: onSetTokenAndType }) => {
             setLoading(false);
             message.success('Compile Success');
             if (onSetTokenAndType && data.token) {
-                onSetTokenAndType(data.token, data.type);
+                onSetTokenAndType(data.token, data.type_assignments);
             }
             if (onAddOutput) {
                 onAddOutput({

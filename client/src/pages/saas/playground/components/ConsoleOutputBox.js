@@ -15,7 +15,7 @@ const handleDownload = (text, label) => {
     URL.revokeObjectURL(url);
 };
 
-const ConsoleOutputBox = ({ outputs = [] }) => {
+const ConsoleOutputBox = ({ outputs = [], clearOutputs }) => {
     return (
         <div style={{
             border: '1px solid #eee',
@@ -31,9 +31,26 @@ const ConsoleOutputBox = ({ outputs = [] }) => {
                 fontWeight: 500,
                 padding: '12px 24px',
                 borderBottom: '1px solid #222',
-                background: '#181818'
+                background: '#181818',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between'
             }}>
-                Results
+                <span>Results</span>
+                <button
+                    style={{
+                        background: '#ff7875',
+                        color: '#fff',
+                        border: 'none',
+                        borderRadius: 4,
+                        padding: '4px 12px',
+                        cursor: 'pointer',
+                        fontWeight: 400
+                    }}
+                    onClick={clearOutputs}
+                >
+                    Clear
+                </button>
             </div>
             <div style={{
                 flex: 1,

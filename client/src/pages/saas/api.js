@@ -6,7 +6,7 @@ export function getApiBaseUrl() {
         return 'https://wiscreationsoft.com:1080/api';
     } else {
         // 开发环境
-        return 'http://localhost.com:1080/api';
+        return 'https://wiscreationsoft.com:1080/api';
     }
 }
 

@@ -6,17 +6,22 @@ import ConsoleOutputBox from './playground/components/ConsoleOutputBox';
 const Playground = () => {
     const [outputs, setOutputs] = useState([]);
     const [token, setToken] = useState('');
-    const [type, setType] = useState('');
+    const [typeAssignments, setTypeAssignments] = useState(''); // 类型定义
 
     // 新增一条输出
     const handleAddOutput = (output) => {
-        setOutputs(prev => [...prev, output]);
+        setOutputs(prev => [output, ...prev]);
     };
 
     // 保存token
-    const handleSetTokenAndType = (token, type) => {
+    const handleSetTokenAndType = (token, typeAssignments) => {
         setToken(token);
-        setType(type);
+        setTypeAssignments(typeAssignments);
+    };
+
+    // 清空输出
+    const handleClearOutputs = () => {
+        setOutputs([]);
     };
 
     return (
@@ -26,10 +31,10 @@ const Playground = () => {
                     <SchemaBox onAddOutput={handleAddOutput} onSetTokenAndType={handleSetTokenAndType} />
                 </div>
                 <div style={{ flex: 1, minWidth: 340, height: '100%', overflow: 'hidden' }}>
-                    <EncodeDecodeBox onAddOutput={handleAddOutput} token={token} type={type} />
+                    <EncodeDecodeBox onAddOutput={handleAddOutput} token={token} typeAssignments={typeAssignments} />
                 </div>
                 <div style={{ flex: 1, minWidth: 340, height: '100%', overflow: 'hidden' }}>
-                    <ConsoleOutputBox outputs={outputs} />
+                    <ConsoleOutputBox outputs={outputs} clearOutputs={handleClearOutputs} />
                 </div>
             </div>
         </div>

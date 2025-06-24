@@ -27,6 +27,10 @@ if (process.env.NODE_ENV === 'production') {
     app.get('*', (req, res) => {
         res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
     });
+} else {
+    app.get('/', (req, res) => {
+        res.send('开发环境首页，前端请用 npm run dev 或类似命令启动前端服务');
+    });
 }
 
 // 404处理

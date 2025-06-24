@@ -9,7 +9,7 @@ const valueOptions = [
     { value: 'json', label: 'JSON' },
 ];
 
-const EncodeTab = ({ onAddOutput, token, type }) => {
+const EncodeTab = ({ onAddOutput, token, typeAssignments }) => {
     const [loading, setLoading] = useState(false);
 
     const onFinish = async (values) => {
@@ -78,7 +78,7 @@ const EncodeTab = ({ onAddOutput, token, type }) => {
                 onFinish={onFinish}
                 initialValues={{
                     valueType: 'json',
-                    type: type,
+                    type: '',
                     valueText: ''
                 }}
             >
@@ -90,7 +90,21 @@ const EncodeTab = ({ onAddOutput, token, type }) => {
                     </Select>
                 </Form.Item>
                 <Form.Item label="Type:" name="type" style={{ marginBottom: 16 }} rules={[{ required: true, message: 'Please select a type' }]}>
-                    <Input placeholder="please input type..." />
+                    <Select
+                        placeholder="请选择类型"
+                        showSearch
+                        optionFilterProp="children"
+                    >
+                        {Array.isArray(typeAssignments) && typeAssignments.length > 0 ? (
+                            typeAssignments.map((item) => (
+                                <Option key={item} value={item}>{item}</Option>
+                            ))
+                        ) : (
+                            <Option value="" disabled>
+                                No available types
+                            </Option>
+                        )}
+                    </Select>
                 </Form.Item>
                 <div style={{ marginBottom: 8, color: '#888', fontSize: 13 }}>
                     Enter a Value (in the ASN.1 Value Notation format) for one of the Types defined in the Schema. Click Encode. Various encoded formats will be available as links for downloading.

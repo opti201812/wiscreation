@@ -44,3 +44,4 @@ logs/
 
 *.sqlite
 .history
+.env.example
