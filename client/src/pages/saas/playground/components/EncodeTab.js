@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Select, Input, Button, Form, message } from 'antd';
+import React, { useState, useMemo } from 'react';
+import { Select, Input, Button, Form, message, Radio } from 'antd';
 import { API_BASE_URL } from '../../api';
 
 const { Option } = Select;
@@ -9,10 +9,29 @@ const valueOptions = [
     { value: 'json', label: 'JSON' },
 ];
 
+const radioOptions = [
+    { value: 'BER', label: 'BER', disabled: false },
+    { value: 'DER', label: 'DER', disabled: true },
+    { value: 'PER', label: 'PER', disabled: true },
+    { value: 'UPER', label: 'UPER', disabled: true },
+    { value: 'OER', label: 'OER', disabled: true },
+    { value: 'COER', label: 'COER', disabled: true },
+    { value: 'CUPER', label: 'CUPER', disabled: true },
+];
+
 const EncodeTab = ({ onAddOutput, token, typeAssignments }) => {
     const [loading, setLoading] = useState(false);
 
+    const typeAssignmentsPlaceholder = useMemo(() => {
+        if (!typeAssignments || typeAssignments.length === 0) {
+            return 'Please compile first...';
+        }
+        return 'Please choose a type assignment...';
+    }, [typeAssignments]);
+
     const onFinish = async (values) => {
+        // encodingRule 来自 radio
+        const encodingRule = values.radio || 'BER';
         if (!token) {
             // 没有token，直接输出错误
             if (onAddOutput) {
@@ -39,7 +58,7 @@ const EncodeTab = ({ onAddOutput, token, typeAssignments }) => {
                 token,
                 typeName: trimmedType,
                 value: parsedValue,
-                encodingRule: 'BER' // 可根据实际需求让用户选择
+                encodingRule // 来自 radio
             };
             const res = await fetch(`${API_BASE_URL}/encode`, {
                 method: 'POST',
@@ -78,55 +97,72 @@ const EncodeTab = ({ onAddOutput, token, typeAssignments }) => {
                 onFinish={onFinish}
                 initialValues={{
                     valueType: 'json',
-                    type: '',
-                    valueText: ''
+                    type: null,
+                    valueText: '',
+                    radio: 'BER', // 新增，radio初始值
                 }}
             >
-                <Form.Item label="Value:" name="valueType" style={{ marginBottom: 12 }}>
+                <Form.Item label="Value:" name="valueType" style={{ marginBottom: 12, display: 'none' }}>
                     <Select>
                         {valueOptions.map(opt => (
                             <Option key={opt.value} value={opt.value}>{opt.label}</Option>
                         ))}
                     </Select>
                 </Form.Item>
-                <Form.Item label="Type:" name="type" style={{ marginBottom: 16 }} rules={[{ required: true, message: 'Please select a type' }]}>
+                <Form.Item label="Type Assignments:" name="type" style={{ marginBottom: 16 }} rules={[{ required: true, message: 'Please select a type' }]}>
                     <Select
-                        placeholder="请选择类型"
+                        placeholder={typeAssignmentsPlaceholder}
                         showSearch
                         optionFilterProp="children"
+                        notFoundContent={typeAssignmentsPlaceholder}
                     >
-                        {Array.isArray(typeAssignments) && typeAssignments.length > 0 ? (
-                            typeAssignments.map((item) => (
-                                <Option key={item} value={item}>{item}</Option>
-                            ))
-                        ) : (
-                            <Option value="" disabled>
-                                No available types
-                            </Option>
-                        )}
+                        {typeAssignments?.map((item) => (
+                            <Option key={item} value={item}>{item}</Option>
+                        ))}
                     </Select>
                 </Form.Item>
                 <div style={{ marginBottom: 8, color: '#888', fontSize: 13 }}>
                     Enter a Value (in the ASN.1 Value Notation format) for one of the Types defined in the Schema. Click Encode. Various encoded formats will be available as links for downloading.
                 </div>
-                <Form.Item name="valueText" style={{ marginBottom: 0 }}
-                    rules={[
-                        {
-                            validator: (_, value) => {
-                                try {
-                                    if (value) {
-                                        JSON.parse(value);
+                <div style={{ display: 'flex', gap: 8 }}>
+                    <Form.Item name="valueText" style={{ flex: 1, marginBottom: 0 }}
+                        rules={[
+                            {
+                                validator: (_, value) => {
+                                    try {
+                                        if (value) {
+                                            JSON.parse(value);
+                                        }
+                                        return Promise.resolve();
+                                    } catch (e) {
+                                        return Promise.reject('Invalid JSON format');
                                     }
-                                    return Promise.resolve();
-                                } catch (e) {
-                                    return Promise.reject('Invalid JSON format');
                                 }
                             }
-                        }
-                    ]}
-                >
-                    <TextArea rows={14} placeholder="please input value in JER(JSON) format..." />
-                </Form.Item>
+                        ]}
+                    >
+                        <TextArea rows={14} placeholder="please input value in JER(JSON) format..." />
+                    </Form.Item>
+                    <Form.Item
+                        name="radio"
+                        style={{ marginBottom: 0, marginLeft: 8 }}
+                    >
+                        <Radio.Group
+                            style={{ display: 'flex', flexDirection: 'column', gap: 4 }}
+                        >
+                            {radioOptions.map(opt => (
+                                <Radio
+                                    key={opt.value}
+                                    value={opt.value}
+                                    disabled={opt.disabled}
+                                    style={{ marginBottom: 4 }}
+                                >
+                                    {opt.label}
+                                </Radio>
+                            ))}
+                        </Radio.Group>
+                    </Form.Item>
+                </div>
                 <Button
                     type="primary"
                     htmlType="submit"

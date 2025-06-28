@@ -89,8 +89,8 @@ const SchemaBox = ({ onAddOutput, onSetTokenAndType }) => {
                         placeholder="please input schema..."
                     />
                 </Form.Item>
-                <div style={{ marginBottom: 8, marginTop: 8 }}>Compiling Options</div>
-                <Form.Item name="strict" valuePropName="checked" style={{ display: 'inline-block', marginLeft: 16, marginBottom: 0 }}>
+                <div style={{ marginBottom: 8, marginTop: 8, display: 'none' }}>Compiling Options</div>
+                <Form.Item name="strict" valuePropName="checked" style={{ display: 'none', marginLeft: 16, marginBottom: 0 }}>
                     <Checkbox>Strict syntax checking</Checkbox>
                 </Form.Item>
                 <Checkbox style={{ marginLeft: 16, display: 'none' }}>Generate sample values</Checkbox>

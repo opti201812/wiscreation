@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Select, Input, Button, Radio, Form, message } from 'antd';
+import React, { useState, useMemo } from 'react';
+import { Select, Input, Button, Form, message } from 'antd';
 import { API_BASE_URL } from '../../api';
 
 const { Option } = Select;
@@ -9,18 +9,16 @@ const dataOptions = [
     { value: 'hex', label: 'HEX' },
 ];
 
-const radioOptions = [
-    { value: 'BER', label: 'BER', disabled: false },
-    { value: 'DER', label: 'DER', disabled: false },
-    { value: 'PER', label: 'PER', disabled: false },
-    { value: 'UPER', label: 'UPER', disabled: false },
-    { value: 'OER', label: 'OER', disabled: false },
-    { value: 'COER', label: 'COER', disabled: true },
-    { value: 'CUPER', label: 'CUPER', disabled: true },
-];
 
 const DecodeTab = ({ onAddOutput, token, typeAssignments }) => {
     const [loading, setLoading] = useState(false);
+
+    const typeAssignmentsPlaceholder = useMemo(() => {
+        if (!typeAssignments || typeAssignments.length === 0) {
+            return 'Please compile first...';
+        }
+        return 'Please choose a type assignment...';
+    }, [typeAssignments]);
 
     const onFinish = async (values) => {
         if (!token) {
@@ -38,8 +36,7 @@ const DecodeTab = ({ onAddOutput, token, typeAssignments }) => {
             const payload = {
                 token,
                 typeName: trimmedType,
-                data: values.decodeText,
-                encodingRule: values.radio
+                data: values.decodeText
             };
             const res = await fetch(`${API_BASE_URL}/decode`, {
                 method: 'POST',
@@ -73,16 +70,15 @@ const DecodeTab = ({ onAddOutput, token, typeAssignments }) => {
             onFinish={onFinish}
             initialValues={{
                 dataType: 'hex',
-                type: '',
-                decodeText: '',
-                radio: 'BER'
+                type: null,
+                decodeText: ''
             }}
         >
             <div style={{ display: 'flex', gap: 8, marginBottom: 8 }}>
                 <Form.Item
                     label="Data:"
                     name="dataType"
-                    style={{ flex: 1, marginBottom: 0 }}
+                    style={{ flex: 1, marginBottom: 0, display: 'none' }}
                 >
                     <Select>
                         {dataOptions.map(opt => (
@@ -91,20 +87,20 @@ const DecodeTab = ({ onAddOutput, token, typeAssignments }) => {
                     </Select>
                 </Form.Item>
                 <Form.Item
-                    label="Type:"
+                    label="Type Assignments:"
                     name="type"
                     style={{ flex: 1, marginBottom: 0 }}
+                    rules={[{ required: true, message: 'Please select a type' }]}
                 >
-                    <Select placeholder="please input type...">
-                        {Array.isArray(typeAssignments) && typeAssignments.length > 0 ? (
-                            typeAssignments.map((item) => (
-                                <Option key={item} value={item}>{item}</Option>
-                            ))
-                        ) : (
-                            <Option value="" disabled>
-                                No available types
-                            </Option>
-                        )}
+                    <Select
+                        placeholder={typeAssignmentsPlaceholder}
+                        showSearch
+                        optionFilterProp="children"
+                        notFoundContent={typeAssignmentsPlaceholder}
+                    >
+                        {typeAssignments?.map((item) => (
+                            <Option key={item} value={item}>{item}</Option>
+                        ))}
                     </Select>
                 </Form.Item>
             </div>
@@ -121,25 +117,6 @@ const DecodeTab = ({ onAddOutput, token, typeAssignments }) => {
                         placeholder="Please input HEX or Base64 data..."
                         style={{ resize: 'vertical' }}
                     />
-                </Form.Item>
-                <Form.Item
-                    name="radio"
-                    style={{ marginBottom: 0, marginLeft: 8 }}
-                >
-                    <Radio.Group
-                        style={{ display: 'flex', flexDirection: 'column', gap: 4 }}
-                    >
-                        {radioOptions.map(opt => (
-                            <Radio
-                                key={opt.value}
-                                value={opt.value}
-                                disabled={opt.disabled}
-                                style={{ marginBottom: 4 }}
-                            >
-                                {opt.label}
-                            </Radio>
-                        ))}
-                    </Radio.Group>
                 </Form.Item>
             </div>
             <Button

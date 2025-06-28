@@ -6,7 +6,7 @@ import ConsoleOutputBox from './playground/components/ConsoleOutputBox';
 const Playground = () => {
     const [outputs, setOutputs] = useState([]);
     const [token, setToken] = useState('');
-    const [typeAssignments, setTypeAssignments] = useState(''); // 类型定义
+    const [typeAssignments, setTypeAssignments] = useState([]); // 类型定义
 
     // 新增一条输出
     const handleAddOutput = (output) => {

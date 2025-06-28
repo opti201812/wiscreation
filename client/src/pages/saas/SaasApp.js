@@ -111,32 +111,101 @@ const SaasApp = () => {
     const pathSnippets = location.pathname.split('/').filter(i => i);
     const currentPath = pathSnippets.length > 1 ? pathSnippets[1] : 'playground';
 
-    // 面包屑导航
-    const breadcrumbItems = pathSnippets.map((_, index) => {
-        const url = `/${pathSnippets.slice(0, index + 1).join('/')}`;
-        const label = pathSnippets[index].charAt(0).toUpperCase() + pathSnippets[index].slice(1);
-        return (
-            <Breadcrumb.Item key={url}>
-                <Link to={url}>{label}</Link>
-            </Breadcrumb.Item>
-        );
-    });
+    // 面包屑导航 (Antd v5+ 用 items 属性)
+    const breadcrumbItems = [
+        {
+            title: <Link to="/">{t('nav.home')}</Link>,
+            key: 'home',
+        },
+        {
+            title: <Link to="/app">{t('nav.saas')}</Link>,
+            key: 'saas',
+        },
+        ...pathSnippets.map((_, index) => {
+            const url = `/${pathSnippets.slice(0, index + 1).join('/')}`;
+            const label = pathSnippets[index].charAt(0).toUpperCase() + pathSnippets[index].slice(1);
+            return {
+                title: <Link to={url}>{label}</Link>,
+                key: url,
+            };
+        })
+    ];
 
-    // 用户菜单
-    const userMenu = (
-        <Menu>
-            <Menu.Item key="profile" icon={<UserOutlined />}>
-                <Link to="/app/profile">{t('nav.profile')}</Link>
-            </Menu.Item>
-            <Menu.Item key="settings" icon={<SettingOutlined />}>
-                <Link to="/app/settings">{t('nav.settings')}</Link>
-            </Menu.Item>
-            <Menu.Divider />
-            <Menu.Item key="logout" icon={<LogoutOutlined />} onClick={handleLogout}>
-                {t('nav.logout')}
-            </Menu.Item>
-        </Menu>
-    );
+    // 用户菜单 items
+    const userMenuItems = [
+        {
+            key: 'profile',
+            icon: <UserOutlined />,
+            label: <Link to="/app/profile">{t('nav.profile')}</Link>,
+        },
+        {
+            key: 'settings',
+            icon: <SettingOutlined />,
+            label: <Link to="/app/settings">{t('nav.settings')}</Link>,
+        },
+        { type: 'divider' },
+        {
+            key: 'logout',
+            icon: <LogoutOutlined />,
+            label: t('nav.logout'),
+            onClick: handleLogout,
+        },
+    ];
+
+    // Sider 菜单 items for antd v5+
+    const sidebarMenuItems = [
+        {
+            key: 'asn1',
+            icon: <AppstoreOutlined />,
+            label: <Link to="/app/asn1">{t('nav.playground')}</Link>,
+        },
+        // Uncomment and adapt these as needed:
+        // {
+        //     key: 'dashboard',
+        //     icon: <DashboardOutlined />,
+        //     label: <Link to="/app/dashboard">{t('nav.dashboard')}</Link>,
+        // },
+        // {
+        //     key: 'tasks',
+        //     icon: <FileTextOutlined />,
+        //     label: t('tasks.title'),
+        //     children: [
+        //         {
+        //             key: 'tasks',
+        //             label: <Link to="/app/tasks">{t('tasks.all')}</Link>,
+        //         },
+        //         {
+        //             key: 'mytasks',
+        //             label: <Link to="/app/tasks/my">{t('tasks.filter.assignedToMe')}</Link>,
+        //         },
+        //     ],
+        // },
+        // {
+        //     key: 'projects',
+        //     icon: <AppstoreOutlined />,
+        //     label: t('projects.title'),
+        //     children: [
+        //         {
+        //             key: 'projects',
+        //             label: <Link to="/app/projects">{t('projects.all')}</Link>,
+        //         },
+        //         {
+        //             key: 'myprojects',
+        //             label: <Link to="/app/projects/my">{t('projects.filter.myProjects')}</Link>,
+        //         },
+        //     ],
+        // },
+        // {
+        //     key: 'team',
+        //     icon: <TeamOutlined />,
+        //     label: <Link to="/app/team">{t('nav.team')}</Link>,
+        // },
+        // {
+        //     key: 'settings',
+        //     icon: <SettingOutlined />,
+        //     label: <Link to="/app/settings">{t('nav.settings')}</Link>,
+        // },
+    ];
 
     return (
         <Layout style={{ minHeight: 'calc(100vh - 64px - 70px)' }}>
@@ -164,36 +233,8 @@ const SaasApp = () => {
                     mode="inline"
                     selectedKeys={[currentPath]}
                     defaultOpenKeys={['tasks', 'projects']}
-                >
-                    <Menu.Item key="playground" icon={<AppstoreOutlined />}>
-                        <Link to="/app/playground">{t('nav.playground')}</Link>
-                    </Menu.Item>
-                    {/* <Menu.Item key="dashboard" icon={<DashboardOutlined />}>
-                        <Link to="/app/dashboard">{t('nav.dashboard')}</Link>
-                    </Menu.Item>
-                    <Menu.SubMenu key="tasks" icon={<FileTextOutlined />} title={t('tasks.title')}>
-                        <Menu.Item key="tasks">
-                            <Link to="/app/tasks">{t('tasks.all')}</Link>
-                        </Menu.Item>
-                        <Menu.Item key="mytasks">
-                            <Link to="/app/tasks/my">{t('tasks.filter.assignedToMe')}</Link>
-                        </Menu.Item>
-                    </Menu.SubMenu>
-                    <Menu.SubMenu key="projects" icon={<AppstoreOutlined />} title={t('projects.title')}>
-                        <Menu.Item key="projects">
-                            <Link to="/app/projects">{t('projects.all')}</Link>
-                        </Menu.Item>
-                        <Menu.Item key="myprojects">
-                            <Link to="/app/projects/my">{t('projects.filter.myProjects')}</Link>
-                        </Menu.Item>
-                    </Menu.SubMenu>
-                    <Menu.Item key="team" icon={<TeamOutlined />}>
-                        <Link to="/app/team">{t('nav.team')}</Link>
-                    </Menu.Item>
-                    <Menu.Item key="settings" icon={<SettingOutlined />}>
-                        <Link to="/app/settings">{t('nav.settings')}</Link>
-                    </Menu.Item> */}
-                </Menu>
+                    items={sidebarMenuItems}
+                />
             </Sider>
 
             <Layout>
@@ -225,7 +266,7 @@ const SaasApp = () => {
                             style={{ marginRight: 16 }}
                         />
 
-                        <Dropdown overlay={userMenu} placement="bottomRight">
+                        <Dropdown menu={{ items: userMenuItems }} placement="bottomRight">
                             <div style={{ cursor: 'pointer', display: 'flex', alignItems: 'center' }}>
                                 <Avatar icon={<UserOutlined />} />
                                 <span style={{ marginLeft: 8, marginRight: 8 }}>{t('auth.demoUser')}</span>
@@ -235,16 +276,12 @@ const SaasApp = () => {
                 </Header>
 
                 <Content style={{ margin: '16px' }}>
-                    <Breadcrumb style={{ marginBottom: '16px', display: 'none' }}>
-                        <Breadcrumb.Item><Link to="/">{t('nav.home')}</Link></Breadcrumb.Item>
-                        <Breadcrumb.Item><Link to="/app">{t('nav.saas')}</Link></Breadcrumb.Item>
-                        {breadcrumbItems}
-                    </Breadcrumb>
+                    <Breadcrumb style={{ marginBottom: '16px', display: 'none' }} items={breadcrumbItems} />
 
                     <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
                         <Routes>
                             <Route path="/" element={<Playground />} />
-                            <Route path="/playground" element={<Playground />} />
+                            <Route path="/asn1" element={<Playground />} />
                             <Route path="/dashboard" element={<Dashboard />} />
                             <Route path="/profile" element={<Profile />} />
                             <Route path="/settings" element={<Settings />} />
