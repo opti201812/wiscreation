@@ -7,7 +7,7 @@ const EncodeDecodeBox = ({ onAddOutput, token, typeAssignments }) => {
     const [activeKey, setActiveKey] = useState('encode');
 
     return (
-        <div style={{ border: '1px solid #eee', borderRadius: 8, padding: 10, marginBottom: 10, background: '#fafbfc' }}>
+        <div style={{ border: '1px solid #eee', borderRadius: 8, padding: 10, marginBottom: 10, background: '#fafbfc', height: 650 }}>
             <Tabs
                 activeKey={activeKey}
                 onChange={setActiveKey}

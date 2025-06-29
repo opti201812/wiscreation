@@ -109,7 +109,7 @@ const EncodeTab = ({ onAddOutput, token, typeAssignments }) => {
                         ))}
                     </Select>
                 </Form.Item>
-                <Form.Item label="Type Assignments:" name="type" style={{ marginBottom: 16 }} rules={[{ required: true, message: 'Please select a type' }]}>
+                <Form.Item label="Type Assignments:" name="type" style={{ marginBottom: 0 }} rules={[{ required: true, message: 'Please select a type' }]}>
                     <Select
                         placeholder={typeAssignmentsPlaceholder}
                         showSearch
@@ -141,7 +141,7 @@ const EncodeTab = ({ onAddOutput, token, typeAssignments }) => {
                             }
                         ]}
                     >
-                        <TextArea rows={14} placeholder="please input value in JER(JSON) format..." />
+                        <TextArea rows={16} placeholder="please input value in JER(JSON) format..." />
                     </Form.Item>
                     <Form.Item
                         name="radio"

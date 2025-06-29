@@ -141,7 +141,7 @@ const Footer = () => {
                             © {year} {t('app.title')}. {t('footer.rights')}
                         </Text>
                     </Col>
-                    <Col>
+                    {/* <Col>
                         <Space split={<Divider type="vertical" style={{ borderColor: 'rgba(255, 255, 255, 0.1)' }} />}>
                             <Link to="/privacy" style={{ color: 'rgba(255, 255, 255, 0.45)' }}>
                                 {t('footer.privacy')}
@@ -150,7 +150,7 @@ const Footer = () => {
                                 {t('footer.terms')}
                             </Link>
                         </Space>
-                    </Col>
+                    </Col> */}
                 </Row>
             </div>
         </AntFooter>

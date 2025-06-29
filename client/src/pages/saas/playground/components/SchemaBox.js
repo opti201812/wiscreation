@@ -62,7 +62,7 @@ const SchemaBox = ({ onAddOutput, onSetTokenAndType }) => {
     };
 
     return (
-        <div style={{ background: '#fafbfc', border: '1px solid #eee', borderRadius: 8, padding: 24 }}>
+        <div style={{ background: '#fafbfc', border: '1px solid #eee', borderRadius: 8, padding: 24, height: 650 }}>
             <Form
                 form={form}
                 layout="vertical"
@@ -85,7 +85,7 @@ const SchemaBox = ({ onAddOutput, onSetTokenAndType }) => {
                 </div>
                 <Form.Item name="asnText" style={{ marginBottom: 0 }}>
                     <TextArea
-                        rows={16}
+                        rows={18}
                         placeholder="please input schema..."
                     />
                 </Form.Item>

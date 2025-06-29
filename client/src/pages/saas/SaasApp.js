@@ -74,7 +74,7 @@ const SaasApp = () => {
                                 border: '1px solid #d9d9d9',
                             }}
                             placeholder={t('auth.login.emailPlaceholder')}
-                            defaultValue="demo@example.com"
+                            defaultValue="demo@wiscreationsoft.com"
                         />
                     </div>
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Tooltip } from 'antd';
 import { CopyOutlined, DownloadOutlined } from '@ant-design/icons';
+import HexDump from './HexDump';
 
 const OutputBlock = ({ label, value, onCopy, onDownload }) => (
     <div style={{
@@ -21,7 +22,7 @@ const OutputBlock = ({ label, value, onCopy, onDownload }) => (
                 {(() => {
                     const pad = n => n.toString().padStart(2, '0');
                     const now = new Date();
-                    return `[${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}]`;
+                    return `[${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}] `;
                 })()}
                 {label}
             </span>
@@ -65,30 +66,7 @@ const OutputBlock = ({ label, value, onCopy, onDownload }) => (
                     // 2. 检查是否为十六进制字符串
                     const hexRe = /^[0-9a-fA-F]+$/;
                     if (value.length % 2 === 0 && value.length > 0 && hexRe.test(value)) {
-                        // 每8字节一行
-                        const lines = [];
-                        for (let i = 0; i < value.length; i += 16) { // 16 hex chars = 8 bytes
-                            const hexChunk = value.substr(i, 16);
-                            // hex部分
-                            let hexParts = [];
-                            for (let j = 0; j < hexChunk.length; j += 2) {
-                                hexParts.push(hexChunk.substr(j, 2));
-                            }
-                            // ascii部分
-                            let ascii = '';
-                            for (let j = 0; j < hexChunk.length; j += 2) {
-                                const byte = parseInt(hexChunk.substr(j, 2), 16);
-                                ascii += (byte >= 32 && byte <= 126) ? String.fromCharCode(byte) : '.';
-                            }
-                            // 补齐8字节
-                            while (hexParts.length < 8) hexParts.push('  ');
-                            lines.push(
-                                <div key={i} style={{ fontFamily: 'monospace' }}>
-                                    {hexParts.join(' ')}{'  '}| {ascii}
-                                </div>
-                            );
-                        }
-                        return <pre style={{ margin: 0 }}>{lines}</pre>;
+                        return <HexDump value={value} />;
                     }
                     // 3. 其它情况原样输出
                     return value;

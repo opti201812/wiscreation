@@ -74,7 +74,7 @@ const DecodeTab = ({ onAddOutput, token, typeAssignments }) => {
                 decodeText: ''
             }}
         >
-            <div style={{ display: 'flex', gap: 8, marginBottom: 8 }}>
+            <div style={{ display: 'flex', gap: 8, marginBottom: 0 }}>
                 <Form.Item
                     label="Data:"
                     name="dataType"
@@ -113,7 +113,7 @@ const DecodeTab = ({ onAddOutput, token, typeAssignments }) => {
                     style={{ flex: 1, marginBottom: 0 }}
                 >
                     <TextArea
-                        rows={17}
+                        rows={16}
                         placeholder="Please input HEX or Base64 data..."
                         style={{ resize: 'vertical' }}
                     />
