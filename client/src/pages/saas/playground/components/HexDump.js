@@ -35,7 +35,7 @@ export default function HexDump({ value }) {
 
     // 列头
     const header = (
-        <div style={{ fontFamily: 'monospace', fontWeight: 'bold' }}>
+        <div style={{ fontFamily: 'monospace' }}>
             {('Addr').padEnd(addrWidth, ' ')}  {Array.from({ length: BYTES_PER_LINE }, (_, i) => toHex(i)).join(' ')}  ASCII
         </div>
     );
