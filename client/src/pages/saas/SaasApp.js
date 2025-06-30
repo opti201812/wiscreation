@@ -133,17 +133,17 @@ const SaasApp = () => {
 
     // 用户菜单 items
     const userMenuItems = [
-        {
-            key: 'profile',
-            icon: <UserOutlined />,
-            label: <Link to="/app/profile">{t('nav.profile')}</Link>,
-        },
-        {
-            key: 'settings',
-            icon: <SettingOutlined />,
-            label: <Link to="/app/settings">{t('nav.settings')}</Link>,
-        },
-        { type: 'divider' },
+        // {
+        //     key: 'profile',
+        //     icon: <UserOutlined />,
+        //     label: <Link to="/app/profile">{t('nav.profile')}</Link>,
+        // },
+        // {
+        //     key: 'settings',
+        //     icon: <SettingOutlined />,
+        //     label: <Link to="/app/settings">{t('nav.settings')}</Link>,
+        // },
+        // { type: 'divider' },
         {
             key: 'logout',
             icon: <LogoutOutlined />,

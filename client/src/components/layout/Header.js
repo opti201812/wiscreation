@@ -85,11 +85,11 @@ const Header = ({ onLanguageChange, currentLanguage }) => {
             icon: <LoginOutlined />,
             label: <Link to="/login">{t('nav.login')}</Link>,
         },
-        {
-            key: 'register',
-            icon: <UserOutlined />,
-            label: <Link to="/register">{t('nav.register')}</Link>,
-        },
+        // {
+        //     key: 'register',
+        //     icon: <UserOutlined />,
+        //     label: <Link to="/register">{t('nav.register')}</Link>,
+        // },
     ];
 
     const Logo = () => (
@@ -138,9 +138,9 @@ const Header = ({ onLanguageChange, currentLanguage }) => {
                 <Button type="text" icon={<LoginOutlined />} style={{ color: '#fff' }}>
                     <Link to="/login">{t('nav.login')}</Link>
                 </Button>
-                <Button type="primary">
+                {/* <Button type="primary">
                     <Link to="/register">{t('nav.register')}</Link>
-                </Button>
+                </Button> */}
             </Space>
         </>
     );
