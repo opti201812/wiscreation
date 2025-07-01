@@ -86,7 +86,7 @@ const SchemaBox = ({ onAddOutput, onSetTokenAndType }) => {
                     </Select>
                 </Form.Item>
                 <div style={{ marginBottom: 8, color: '#888', fontSize: 13 }}>
-                    Select a predefined ASN.1 schema from the dropdown above or manually enter/edit the schema definition below. Click Compile to validate syntax and generate Type Assignments.
+                    Choose a predefined ASN.1 schema from the dropdown above or manually enter/edit the schema definition below. Click Compile to validate syntax and generate Type Assignments.
                 </div>
                 <Form.Item name="asnText" style={{ marginBottom: 0 }}>
                     <TextArea

@@ -119,7 +119,7 @@ const EncodeTab = ({ onAddOutput, token, typeAssignments }) => {
                     </Select>
                 </Form.Item>
                 <div style={{ marginBottom: 8, color: '#888', fontSize: 13 }}>
-                    Choose a Type Assignment from the dropdown, then enter a valid JSON object matching the schema. Click Encode to convert it to ASN.1 binary (hex). Results will appear in righ side.
+                    Choose a Type Assignment above, then enter a valid JSON object matching the schema.  Click Encode to generate the binary ASN.1 output. Results will appear in righ side and downloadable.
                 </div>
                 <div style={{ display: 'flex', gap: 8 }}>
                     <Form.Item name="valueText" style={{ flex: 1, marginBottom: 0 }}
