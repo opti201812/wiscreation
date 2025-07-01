@@ -33,10 +33,11 @@ const DecodeTab = ({ onAddOutput, token, typeAssignments }) => {
         setLoading(true);
         try {
             const trimmedType = values.type ? values.type.trim() : '';
+            // Remove all whitespace from the hex string
             const payload = {
                 token,
                 typeName: trimmedType,
-                data: values.decodeText
+                data: values.decodeText ? values.decodeText.replace(/\s+/g, '') : ''
             };
             const res = await fetch(`${API_BASE_URL}/decode`, {
                 method: 'POST',
@@ -105,16 +106,17 @@ const DecodeTab = ({ onAddOutput, token, typeAssignments }) => {
                 </Form.Item>
             </div>
             <div style={{ marginBottom: 8, color: '#888', fontSize: 13 }}>
-                Select the Type. Upload a message/PDU/record file. Click Decode. The decoded data can be downloaded as a text file in the ASN.1 Value Notation format.
+                Paste the encoded ASN.1 hex string (e.g., copied from Results) and select the correct Type Assignment. Click Decode to convert it back to JSON.
             </div>
             <div style={{ display: 'flex', gap: 8 }}>
                 <Form.Item
                     name="decodeText"
                     style={{ flex: 1, marginBottom: 0 }}
+                    normalize={(value) => value ? value.replace(/\s+/g, '') : ''}
                 >
                     <TextArea
                         rows={16}
-                        placeholder="Please input HEX or Base64 data..."
+                        placeholder="Please input HEX string data here ..."
                         style={{ resize: 'vertical' }}
                     />
                 </Form.Item>

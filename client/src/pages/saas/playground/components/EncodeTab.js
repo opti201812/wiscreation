@@ -11,12 +11,9 @@ const valueOptions = [
 
 const radioOptions = [
     { value: 'BER', label: 'BER', disabled: false },
+    { value: 'CER', label: 'CER', disabled: true },
     { value: 'DER', label: 'DER', disabled: true },
     { value: 'PER', label: 'PER', disabled: true },
-    { value: 'UPER', label: 'UPER', disabled: true },
-    { value: 'OER', label: 'OER', disabled: true },
-    { value: 'COER', label: 'COER', disabled: true },
-    { value: 'CUPER', label: 'CUPER', disabled: true },
 ];
 
 const EncodeTab = ({ onAddOutput, token, typeAssignments }) => {
@@ -122,7 +119,7 @@ const EncodeTab = ({ onAddOutput, token, typeAssignments }) => {
                     </Select>
                 </Form.Item>
                 <div style={{ marginBottom: 8, color: '#888', fontSize: 13 }}>
-                    Enter a Value (in the ASN.1 Value Notation format) for one of the Types defined in the Schema. Click Encode. Various encoded formats will be available as links for downloading.
+                    Choose a Type Assignment from the dropdown, then enter a valid JSON object matching the schema. Click Encode to convert it to ASN.1 binary (hex). Results will appear in righ side.
                 </div>
                 <div style={{ display: 'flex', gap: 8 }}>
                     <Form.Item name="valueText" style={{ flex: 1, marginBottom: 0 }}
@@ -141,7 +138,7 @@ const EncodeTab = ({ onAddOutput, token, typeAssignments }) => {
                             }
                         ]}
                     >
-                        <TextArea rows={16} placeholder="please input value in JER(JSON) format..." />
+                        <TextArea rows={16} placeholder="Please enter value in JER(JSON) format here ..." />
                     </Form.Item>
                     <Form.Item
                         name="radio"
