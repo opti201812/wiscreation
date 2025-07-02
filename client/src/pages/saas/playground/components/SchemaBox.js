@@ -9,22 +9,26 @@ const schemaOptions = [
     { value: 'helloWorld', label: 'Hello world schema' },
     { value: 'manual', label: 'Enter manually' },
 ];
-const schemaText = `--<ASN1.HugeInteger World-Schema.Rocket.range>--
-World-Schema DEFINITIONS AUTOMATIC TAGS ::=
-BEGIN
-  Rocket ::= SEQUENCE
-  {
-     range     INTEGER, -- huge (see a special directive above)
-     name      UTF8String (SIZE(1..16)),
-     message   UTF8String DEFAULT "Hello World" ,
-     fuel      ENUMERATED {solid, liquid, gas},
-     speed     CHOICE
-     {
-        mph    INTEGER,
-        kmph   INTEGER
-     }  OPTIONAL,
-     payload   SEQUENCE OF UTF8String
-  }
+const schemaText = `Hello-world-schema DEFINITIONS  ::= BEGIN
+    PersonnelRecord ::= [APPLICATION 0] IMPLICIT SET {
+        name            Name,
+        title           [0] VisibleString,
+        number          EmployeeNumber,
+        dateOfHire      [1] Date,
+        nameOfSpouse    [2] Name,
+        children        [3] IMPLICIT SEQUENCE OF ChildInformation
+    }
+    ChildInformation ::= SET {
+        name            Name,
+        dateOfBirth     [0] Date
+    }
+    Name ::= [APPLICATION 1] IMPLICIT SEQUENCE {
+        givenName       VisibleString,
+        initial         VisibleString,
+        familyName      VisibleString
+    }
+    EmployeeNumber ::= [APPLICATION 2] IMPLICIT INTEGER
+    Date ::= [APPLICATION 3] IMPLICIT VisibleString -- YYYYMMDD format
 END`;
 
 const SchemaBox = ({ onAddOutput, onSetTokenAndType, selectedSchema, setSelectedSchema }) => {
@@ -108,12 +112,12 @@ const SchemaBox = ({ onAddOutput, onSetTokenAndType, selectedSchema, setSelected
                     </Select>
                 </Form.Item>
                 <div style={{ marginBottom: 8, color: '#888', fontSize: 13 }}>
-                    Select the ASN.1 specification (enter manually, upload new, or pick existing). Compile to check the syntax and to extract the data Types to be used in Decoding and Encoding.
+                    Choose a predefined ASN.1 schema from the dropdown above or manually enter/edit the schema definition below. Click Compile to validate syntax and generate Type Assignments.
                 </div>
                 <Form.Item name="asnText" style={{ marginBottom: 0 }}>
                     <TextArea
                         rows={18}
-                        placeholder="please input schema..."
+                        placeholder="Please enter/edit the schema definition here..."
                     />
                 </Form.Item>
                 <div style={{ marginBottom: 8, marginTop: 8, display: 'none' }}>Compiling Options</div>
