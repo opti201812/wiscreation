@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { handleApiResponse } from './utils';
 import { Select, Input, Button, Checkbox, Form, message } from 'antd';
 import { API_BASE_URL } from '../../api';
 
@@ -79,12 +80,14 @@ const SchemaBox = ({ onAddOutput, onSetTokenAndType, selectedSchema, setSelected
             if (onSetTokenAndType && data.token) {
                 onSetTokenAndType(data.token, data.type_assignments);
             }
-            if (onAddOutput) {
-                onAddOutput({
-                    label: 'Schema Compile',
-                    value: data.data || JSON.stringify(data)
-                });
-            }
+            handleApiResponse({
+                res,
+                data,
+                message,
+                onAddOutput,
+                successLabel: 'Compile',
+                errorLabel: 'Compile Error'
+            });
         } catch (e) {
             setLoading(false);
             message.error('Compile Error');

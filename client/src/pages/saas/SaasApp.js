@@ -13,7 +13,6 @@ import {
 import {
     UserOutlined,
     LogoutOutlined,
-    SettingOutlined,
     MenuFoldOutlined,
     MenuUnfoldOutlined,
     AppstoreOutlined,
@@ -74,7 +73,7 @@ const SaasApp = () => {
                                 border: '1px solid #d9d9d9',
                             }}
                             placeholder={t('auth.login.emailPlaceholder')}
-                            defaultValue="demo@wiscreationsoft.com"
+                            defaultValue="guest@wiscreationsoft.com"
                         />
                     </div>
 

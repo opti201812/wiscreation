@@ -331,7 +331,7 @@
             "register": "Register Now",
             "noAccount": "Don't have an account?",
             "success": "Login successful",
-            "demoHint": "This is a demo version, click the login button to enter directly"
+            "demoHint": "This is a test version, click the login button to enter directly"
         },
         "register": {
             "title": "Create Account",
@@ -360,7 +360,7 @@
         "logout": {
             "success": "Logged out successfully"
         },
-        "demoUser": "Demo User"
+        "demoUser": "Guest"
     },
     "dashboard": {
         "title": "Dashboard Overview",

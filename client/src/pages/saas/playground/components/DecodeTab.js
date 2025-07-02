@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import { handleApiResponse } from './utils';
 import { Select, Input, Button, Form, message } from 'antd';
 import { API_BASE_URL } from '../../api';
 
@@ -64,40 +65,22 @@ const DecodeTab = ({ onAddOutput, token, typeAssignments }) => {
             });
             const data = await res.json();
             setLoading(false);
-            if (!res.ok || data.error) {
-                let msg = data.error || 'Decode Error', descriptions = "";
-                if (Array.isArray(data.details)) {
-                    const descs = data.details.map(d => d.description).filter(Boolean);
-                    descriptions = descs.join('; ');
-                }
-                if (data.description) {
-                    descriptions += (descriptions ? '; ' : ': ') + data.description;
-                }
-                message.error(msg + ": " + descriptions);
-                if (onAddOutput) {
-                    onAddOutput({
-                        label: msg,
-                        value: descriptions || JSON.stringify(data)
-                    });
-                }
-                return;
-            }
-            message.success('Decode Success');
-            if (onAddOutput) {
-                if (data && data.data && typeof data.data === 'object' && data.data.value !== undefined) {
-                    onAddOutput({
-                        label: 'Decode Result',
-                        value: typeof data.data.value === 'object'
+            handleApiResponse({
+                res,
+                data,
+                message,
+                onAddOutput,
+                successLabel: 'Decode',
+                errorLabel: 'Decode Error',
+                valueExtractor: (data) => {
+                    if (data && data.data && typeof data.data === 'object' && data.data.value !== undefined) {
+                        return typeof data.data.value === 'object'
                             ? JSON.stringify(data.data.value, null, 2)
-                            : data.data.value
-                    });
-                } else {
-                    onAddOutput({
-                        label: 'Decode Result',
-                        value: data.data || JSON.stringify(data)
-                    });
+                            : data.data.value;
+                    }
+                    return data.data || JSON.stringify(data);
                 }
-            }
+            });
         } catch (e) {
             setLoading(false);
             message.error('Decode Error');

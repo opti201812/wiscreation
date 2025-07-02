@@ -77,8 +77,8 @@ const Settings = () => {
                             form={accountForm}
                             layout="vertical"
                             initialValues={{
-                                username: 'demo_user',
-                                email: 'demo@example.com',
+                                username: 'guest',
+                                email: 'guest@wiscreationsoft.com',
                                 language: 'zh_CN',
                                 timezone: 'Asia/Shanghai',
                             }}

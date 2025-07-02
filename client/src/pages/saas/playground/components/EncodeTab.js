@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { Select, Input, Button, Form, message, Radio } from 'antd';
 import { API_BASE_URL } from '../../api';
 import { Modal } from 'antd';
+import { handleApiResponse } from './utils';
 
 const { Option } = Select;
 const { TextArea } = Input;
@@ -112,6 +113,8 @@ const EncodeTab = ({ onAddOutput, token, typeAssignments, selectedSchema }) => {
                     Modal.confirm({
                         title: 'Replace content with Hello World JSON?',
                         content: 'Do you want to clear and replace the editor with the Hello World JSON example?',
+                        okText: 'OK',
+                        cancelText: 'Cancel',
                         onOk: () => {
                             form.setFieldsValue({ valueText: helloWorldJson });
                         }
@@ -129,21 +132,9 @@ const EncodeTab = ({ onAddOutput, token, typeAssignments, selectedSchema }) => {
 
     const handleReset = () => {
         if (selectedSchema === 'helloWorld') {
-            Modal.confirm({
-                title: 'Reset to Hello World JSON?',
-                content: 'Do you want to restore the Hello World JSON example?',
-                onOk: () => {
-                    form.setFieldsValue({ valueText: helloWorldJson });
-                }
-            });
+            form.setFieldsValue({ valueText: helloWorldJson });
         } else {
-            Modal.confirm({
-                title: 'Clear editor?',
-                content: 'Do you want to clear the editor content?',
-                onOk: () => {
-                    form.setFieldsValue({ valueText: '' });
-                }
-            });
+            form.setFieldsValue({ valueText: '' });
         }
     };
 
@@ -185,29 +176,14 @@ const EncodeTab = ({ onAddOutput, token, typeAssignments, selectedSchema }) => {
             });
             const data = await res.json();
             setLoading(false);
-            if (!res.ok || data.error) {
-                // 处理错误信息
-                let msg = data.error || 'Encode Error', descriptions = "";
-                if (Array.isArray(data.details)) {
-                    const descs = data.details.map(d => d.description).filter(Boolean);
-                    descriptions = descs.join('; ');
-                }
-                message.error(msg + ": " + descriptions);
-                if (onAddOutput) {
-                    onAddOutput({
-                        label: msg,
-                        value: descriptions || JSON.stringify(data)
-                    });
-                }
-                return;
-            }
-            message.success('Encode Success');
-            if (onAddOutput) {
-                onAddOutput({
-                    label: 'Encode Result',
-                    value: data.data || JSON.stringify(data)
-                });
-            }
+            handleApiResponse({
+                res,
+                data,
+                message,
+                onAddOutput,
+                successLabel: 'Encode',
+                errorLabel: 'Encode Error'
+            });
         } catch (e) {
             setLoading(false);
             message.error('Encode Error');
@@ -309,7 +285,7 @@ const EncodeTab = ({ onAddOutput, token, typeAssignments, selectedSchema }) => {
                     style={{ marginTop: 16, float: 'right', marginRight: 8 }}
                     onClick={handleReset}
                 >
-                    Reset
+                    {selectedSchema === 'helloWorld' ? 'Reset' : 'Clear'}
                 </Button>
                 <div style={{ clear: 'both' }} />
             </Form>

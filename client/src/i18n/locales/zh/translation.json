@@ -358,7 +358,7 @@
         "logout": {
             "success": "已退出登录"
         },
-        "demoUser": "演示用户"
+        "demoUser": "访客"
     },
     "dashboard": {
         "title": "仪表盘概览",

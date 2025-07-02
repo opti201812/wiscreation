@@ -7,8 +7,8 @@ const { Title } = Typography;
 const Profile = () => {
     // 模拟用户数据
     const userData = {
-        name: 'Demo用户',
-        email: 'demo@example.com',
+        name: 'Guest',
+        email: 'guest@wiscreationsoft.com',
         phone: '138****1234',
         address: '上海市浦东新区',
         bio: '资深软件工程师，专注于前端开发和用户体验设计',

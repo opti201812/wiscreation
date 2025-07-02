@@ -432,7 +432,7 @@
         "logout": {
             "success": "正常にログアウトしました"
         },
-        "demoUser": "デモユーザー"
+        "demoUser": "ゲスト"
     },
     "dashboard": {
         "title": "ダッシュボード概要",
