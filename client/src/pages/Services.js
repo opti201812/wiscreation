@@ -33,6 +33,7 @@ const Services = () => {
             title: t('services.saas.title'),
             description: t('services.saas.description'),
             features: t('services.cloudSolutions.features', { returnObjects: true }),
+            link: '/app/asn1',
         },
         {
             id: 3,
@@ -108,37 +109,47 @@ const Services = () => {
                 <Title level={3} style={{ marginBottom: '40px' }}>{t('services.main.title')}</Title>
                 <Row gutter={[32, 32]}>
                     {servicesList.map(service => (
-                        <Col xs={24} md={12} key={service.id}>
-                            <Card
-                                hoverable
-                                style={{ height: '100%' }}
-                                actions={[
-                                    <Button type="primary">{t('common.learnMore')}</Button>,
-                                    <Button>{t('common.contactUs')}</Button>,
-                                ]}
+                        <Col xs={24} md={12} key={service.id} onClick={() => {
+                            console.log("link", service.link);
+                            if (service.link) {
+                                window.location.href = service.link;
+                            }
+                        }}>
+                            <div
+                                style={{ height: '100%', cursor: service.link ? 'pointer' : 'default' }}
+
                             >
-                                <div style={{ textAlign: 'center', marginBottom: '24px' }}>
-                                    {service.icon}
-                                </div>
-                                <Meta
-                                    title={<Title level={4}>{service.title}</Title>}
-                                    description={
-                                        <div>
-                                            <Paragraph>{service.description}</Paragraph>
-                                            <List
-                                                itemLayout="horizontal"
-                                                dataSource={service.features}
-                                                renderItem={item => (
-                                                    <List.Item style={{ padding: '8px 0' }}>
-                                                        <CheckCircleOutlined style={{ color: '#1890ff', marginRight: '8px' }} />
-                                                        {item}
-                                                    </List.Item>
-                                                )}
-                                            />
-                                        </div>
-                                    }
-                                />
-                            </Card>
+                                <Card
+                                    hoverable
+                                    style={{ height: '100%' }}
+                                    actions={[
+                                        <Button type="primary">{t('common.learnMore')}</Button>,
+                                        <Button>{t('common.contactUs')}</Button>,
+                                    ]}
+                                >
+                                    <div style={{ textAlign: 'center', marginBottom: '24px' }}>
+                                        {service.icon}
+                                    </div>
+                                    <Meta
+                                        title={<Title level={4}>{service.title}</Title>}
+                                        description={
+                                            <div>
+                                                <Paragraph>{service.description}</Paragraph>
+                                                <List
+                                                    itemLayout="horizontal"
+                                                    dataSource={service.features}
+                                                    renderItem={item => (
+                                                        <List.Item style={{ padding: '8px 0' }}>
+                                                            <CheckCircleOutlined style={{ color: '#1890ff', marginRight: '8px' }} />
+                                                            {item}
+                                                        </List.Item>
+                                                    )}
+                                                />
+                                            </div>
+                                        }
+                                    />
+                                </Card>
+                            </div>
                         </Col>
                     ))}
                 </Row>

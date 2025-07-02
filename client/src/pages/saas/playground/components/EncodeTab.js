@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { Select, Input, Button, Form, message, Radio } from 'antd';
 import { API_BASE_URL } from '../../api';
+import { Modal } from 'antd';
 
 const { Option } = Select;
 const { TextArea } = Input;
@@ -19,8 +20,46 @@ const radioOptions = [
     { value: 'CUPER', label: 'CUPER', disabled: true },
 ];
 
-const EncodeTab = ({ onAddOutput, token, typeAssignments }) => {
+
+const helloWorldJson = JSON.stringify({
+    name: {
+        givenName: "John",
+        initial: "P",
+        familyName: "Smith"
+    },
+    title: "Director",
+    number: 51,
+    dateOfHire: "19710917",
+    nameOfSpouse: {
+        givenName: "Mary",
+        initial: "T",
+        familyName: "Smith"
+    },
+    children: [
+        {
+            name: {
+                givenName: "Ralph",
+                initial: "T",
+                familyName: "Smith"
+            },
+            dateOfBirth: "19571111"
+        },
+        {
+            name: {
+                givenName: "Susan",
+                initial: "B",
+                familyName: "Jones"
+            },
+            dateOfBirth: "19590717"
+        }
+    ]
+}, null, 2);
+
+const EncodeTab = ({ onAddOutput, token, typeAssignments, selectedSchema }) => {
     const [loading, setLoading] = useState(false);
+    const [form] = Form.useForm();
+    const [lastSchema, setLastSchema] = useState("helloWorld");
+    const didInitRef = React.useRef(false);
 
     const typeAssignmentsPlaceholder = useMemo(() => {
         if (!typeAssignments || typeAssignments.length === 0) {
@@ -28,6 +67,88 @@ const EncodeTab = ({ onAddOutput, token, typeAssignments }) => {
         }
         return 'Please choose a type assignment...';
     }, [typeAssignments]);
+
+    // 记忆和自动恢复Type Assignment
+    const lastTypeAssignmentRef = React.useRef(null);
+    React.useEffect(() => {
+        if (typeAssignments && typeAssignments.length > 0) {
+            let toSet = lastTypeAssignmentRef.current;
+            if (!toSet || !typeAssignments.includes(toSet)) {
+                toSet = typeAssignments[0];
+            }
+            form.setFieldsValue({ type: toSet });
+        }
+    }, [typeAssignments, form]);
+    const handleTypeChange = value => {
+        lastTypeAssignmentRef.current = value;
+        form.setFieldsValue({ type: value });
+    };
+
+
+    // 监听 selectedSchema 变化，处理 helloWorld 联动逻辑
+    React.useEffect(() => {
+        if (!didInitRef.current) {
+            // 首次渲染
+            if (selectedSchema === 'helloWorld') {
+                const valueText = form.getFieldValue('valueText');
+                if (!valueText) {
+                    form.setFieldsValue({ valueText: helloWorldJson });
+                }
+            }
+            setLastSchema(selectedSchema);
+            didInitRef.current = true;
+            return;
+        }
+
+        // 非首次渲染，才弹窗
+        if (lastSchema !== selectedSchema) {
+            const valueText = form.getFieldValue('valueText');
+            if (selectedSchema === 'helloWorld') {
+                if (!valueText) {
+                    form.setFieldsValue({ valueText: helloWorldJson });
+                } else {
+                    const currentText = form.getFieldValue('valueText');
+                    if (currentText === helloWorldJson) {
+                        form.setFieldsValue({ valueText: helloWorldJson });
+                        return;
+                    }
+                    Modal.confirm({
+                        title: 'Replace content with Hello World JSON?',
+                        content: 'Do you want to clear and replace the editor with the Hello World JSON example?',
+                        onOk: () => {
+                            form.setFieldsValue({ valueText: helloWorldJson });
+                        }
+                    });
+                }
+            } else {
+                // 如果切换到非helloWorld，且内容等于helloWorldJson，则清空
+                if (valueText === helloWorldJson) {
+                    form.setFieldsValue({ valueText: '' });
+                }
+            }
+            setLastSchema(selectedSchema);
+        }
+    }, [selectedSchema, form, lastSchema]);
+
+    const handleReset = () => {
+        if (selectedSchema === 'helloWorld') {
+            Modal.confirm({
+                title: 'Reset to Hello World JSON?',
+                content: 'Do you want to restore the Hello World JSON example?',
+                onOk: () => {
+                    form.setFieldsValue({ valueText: helloWorldJson });
+                }
+            });
+        } else {
+            Modal.confirm({
+                title: 'Clear editor?',
+                content: 'Do you want to clear the editor content?',
+                onOk: () => {
+                    form.setFieldsValue({ valueText: '' });
+                }
+            });
+        }
+    };
 
     const onFinish = async (values) => {
         // encodingRule 来自 radio
@@ -65,11 +186,24 @@ const EncodeTab = ({ onAddOutput, token, typeAssignments }) => {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload)
             });
-            if (!res.ok) {
-                throw new Error(`API request failed with status ${res.status}`);
-            }
             const data = await res.json();
             setLoading(false);
+            if (!res.ok || data.error) {
+                // 处理错误信息
+                let msg = data.error || 'Encode Error', descriptions = "";
+                if (Array.isArray(data.details)) {
+                    const descs = data.details.map(d => d.description).filter(Boolean);
+                    descriptions = descs.join('; ');
+                }
+                message.error(msg + ": " + descriptions);
+                if (onAddOutput) {
+                    onAddOutput({
+                        label: msg,
+                        value: descriptions || JSON.stringify(data)
+                    });
+                }
+                return;
+            }
             message.success('Encode Success');
             if (onAddOutput) {
                 onAddOutput({
@@ -93,13 +227,14 @@ const EncodeTab = ({ onAddOutput, token, typeAssignments }) => {
     return (
         <div style={{ height: '400px' }}>
             <Form
+                form={form}
                 layout="vertical"
                 onFinish={onFinish}
                 initialValues={{
                     valueType: 'json',
                     type: null,
                     valueText: '',
-                    radio: 'BER', // 新增，radio初始值
+                    radio: 'BER',
                 }}
             >
                 <Form.Item label="Value:" name="valueType" style={{ marginBottom: 12, display: 'none' }}>
@@ -115,6 +250,7 @@ const EncodeTab = ({ onAddOutput, token, typeAssignments }) => {
                         showSearch
                         optionFilterProp="children"
                         notFoundContent={typeAssignmentsPlaceholder}
+                        onChange={handleTypeChange}
                     >
                         {typeAssignments?.map((item) => (
                             <Option key={item} value={item}>{item}</Option>
@@ -170,6 +306,13 @@ const EncodeTab = ({ onAddOutput, token, typeAssignments }) => {
                     loading={loading}
                 >
                     Encode
+                </Button>
+                <Button
+                    type="dashed"
+                    style={{ marginTop: 16, float: 'right', marginRight: 8 }}
+                    onClick={handleReset}
+                >
+                    Reset
                 </Button>
                 <div style={{ clear: 'both' }} />
             </Form>

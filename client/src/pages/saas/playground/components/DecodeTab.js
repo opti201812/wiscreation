@@ -12,6 +12,7 @@ const dataOptions = [
 
 const DecodeTab = ({ onAddOutput, token, typeAssignments }) => {
     const [loading, setLoading] = useState(false);
+    const [form] = Form.useForm();
 
     const typeAssignmentsPlaceholder = useMemo(() => {
         if (!typeAssignments || typeAssignments.length === 0) {
@@ -19,6 +20,23 @@ const DecodeTab = ({ onAddOutput, token, typeAssignments }) => {
         }
         return 'Please choose a type assignment...';
     }, [typeAssignments]);
+
+    // 记忆和自动恢复Type Assignment
+    const lastTypeAssignmentRef = React.useRef(null);
+    React.useEffect(() => {
+        if (typeAssignments && typeAssignments.length > 0) {
+            let toSet = lastTypeAssignmentRef.current;
+            if (!toSet || !typeAssignments.includes(toSet)) {
+                toSet = typeAssignments[0];
+            }
+            form.setFieldsValue({ type: toSet });
+        }
+    }, [typeAssignments, form]);
+    const handleTypeChange = value => {
+        lastTypeAssignmentRef.current = value;
+        form.setFieldsValue({ type: value });
+    };
+
 
     const onFinish = async (values) => {
         if (!token) {
@@ -45,12 +63,39 @@ const DecodeTab = ({ onAddOutput, token, typeAssignments }) => {
             });
             const data = await res.json();
             setLoading(false);
+            if (!res.ok || data.error) {
+                let msg = data.error || 'Decode Error', descriptions = "";
+                if (Array.isArray(data.details)) {
+                    const descs = data.details.map(d => d.description).filter(Boolean);
+                    descriptions = descs.join('; ');
+                }
+                if (data.description) {
+                    descriptions += (descriptions ? '; ' : ': ') + data.description;
+                }
+                message.error(msg + ": " + descriptions);
+                if (onAddOutput) {
+                    onAddOutput({
+                        label: msg,
+                        value: descriptions || JSON.stringify(data)
+                    });
+                }
+                return;
+            }
             message.success('Decode Success');
             if (onAddOutput) {
-                onAddOutput({
-                    label: 'Decode Result',
-                    value: data.data || JSON.stringify(data)
-                });
+                if (data && data.data && typeof data.data === 'object' && data.data.value !== undefined) {
+                    onAddOutput({
+                        label: 'Decode Result',
+                        value: typeof data.data.value === 'object'
+                            ? JSON.stringify(data.data.value, null, 2)
+                            : data.data.value
+                    });
+                } else {
+                    onAddOutput({
+                        label: 'Decode Result',
+                        value: data.data || JSON.stringify(data)
+                    });
+                }
             }
         } catch (e) {
             setLoading(false);
@@ -66,6 +111,7 @@ const DecodeTab = ({ onAddOutput, token, typeAssignments }) => {
 
     return (
         <Form
+            form={form}
             layout="vertical"
             onFinish={onFinish}
             initialValues={{
@@ -97,6 +143,7 @@ const DecodeTab = ({ onAddOutput, token, typeAssignments }) => {
                         showSearch
                         optionFilterProp="children"
                         notFoundContent={typeAssignmentsPlaceholder}
+                        onChange={handleTypeChange}
                     >
                         {typeAssignments?.map((item) => (
                             <Option key={item} value={item}>{item}</Option>

@@ -3,7 +3,7 @@ import { Tabs } from 'antd';
 import EncodeTab from './EncodeTab';
 import DecodeTab from './DecodeTab';
 
-const EncodeDecodeBox = ({ onAddOutput, token, typeAssignments }) => {
+const EncodeDecodeBox = ({ onAddOutput, token, typeAssignments, selectedSchema, setSelectedSchema }) => {
     const [activeKey, setActiveKey] = useState('encode');
 
     return (
@@ -15,7 +15,7 @@ const EncodeDecodeBox = ({ onAddOutput, token, typeAssignments }) => {
                     {
                         key: 'encode',
                         label: 'Encode',
-                        children: <EncodeTab onAddOutput={onAddOutput} token={token} typeAssignments={typeAssignments} />
+                        children: <EncodeTab onAddOutput={onAddOutput} token={token} typeAssignments={typeAssignments} selectedSchema={selectedSchema} />
                     },
                     {
                         key: 'decode',

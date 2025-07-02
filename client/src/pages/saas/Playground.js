@@ -24,14 +24,26 @@ const Playground = () => {
         setOutputs([]);
     };
 
+    const [selectedSchema, setSelectedSchema] = useState('helloWorld');
+
     return (
         <div style={{ margin: '0 auto', padding: 0, height: '100%' }}>
             <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
                 <div style={{ flex: 1, minWidth: 340, height: '100%', overflow: 'hidden' }}>
-                    <SchemaBox onAddOutput={handleAddOutput} onSetTokenAndType={handleSetTokenAndType} />
+                    <SchemaBox
+                        onAddOutput={handleAddOutput}
+                        onSetTokenAndType={handleSetTokenAndType}
+                        selectedSchema={selectedSchema}
+                        setSelectedSchema={setSelectedSchema}
+                    />
                 </div>
                 <div style={{ flex: 1, minWidth: 340, height: '100%', overflow: 'hidden' }}>
-                    <EncodeDecodeBox onAddOutput={handleAddOutput} token={token} typeAssignments={typeAssignments} />
+                    <EncodeDecodeBox
+                        onAddOutput={handleAddOutput}
+                        token={token}
+                        typeAssignments={typeAssignments}
+                        selectedSchema={selectedSchema}
+                    />
                 </div>
                 <div style={{ flex: 1, minWidth: 340, height: '100%', overflow: 'hidden' }}>
                     <ConsoleOutputBox outputs={outputs} clearOutputs={handleClearOutputs} />

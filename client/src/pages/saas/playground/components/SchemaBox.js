@@ -6,6 +6,7 @@ const { Option } = Select;
 const { TextArea } = Input;
 
 const schemaOptions = [
+    { value: 'helloWorld', label: 'Hello world schema' },
     { value: 'manual', label: 'Enter manually' },
 ];
 const schemaText = `--<ASN1.HugeInteger World-Schema.Rocket.range>--
@@ -26,9 +27,35 @@ BEGIN
   }
 END`;
 
-const SchemaBox = ({ onAddOutput, onSetTokenAndType }) => {
+const SchemaBox = ({ onAddOutput, onSetTokenAndType, selectedSchema, setSelectedSchema }) => {
     const [form] = Form.useForm();
     const [loading, setLoading] = useState(false);
+
+    // Set initial value for asnText
+    React.useEffect(() => {
+        form.setFieldsValue({
+            schema: selectedSchema,
+            asnText: selectedSchema === 'helloWorld' ? schemaText : '',
+            strict: false
+        });
+    }, [form, selectedSchema]);
+
+    const handleSchemaChange = (value) => {
+        setSelectedSchema(value);
+        if (value === 'helloWorld') {
+            form.setFieldsValue({ asnText: schemaText });
+        } else if (value === 'manual') {
+            form.setFieldsValue({ asnText: '' });
+        }
+    };
+
+    const handleClearOrReset = () => {
+        if (selectedSchema === 'manual') {
+            form.setFieldsValue({ asnText: '' });
+        } else if (selectedSchema === 'helloWorld') {
+            form.setFieldsValue({ asnText: schemaText });
+        }
+    };
 
     const onFinish = async (values) => {
         setLoading(true);
@@ -74,7 +101,7 @@ const SchemaBox = ({ onAddOutput, onSetTokenAndType }) => {
                 }}
             >
                 <Form.Item label="Schema:" name="schema" style={{ marginBottom: 12 }}>
-                    <Select>
+                    <Select onChange={handleSchemaChange} value={selectedSchema}>
                         {schemaOptions.map(opt => (
                             <Option key={opt.value} value={opt.value}>{opt.label}</Option>
                         ))}
@@ -107,9 +134,9 @@ const SchemaBox = ({ onAddOutput, onSetTokenAndType }) => {
                     <Button
                         type="dashed"
                         style={{ marginTop: 16, float: 'right', marginRight: 8 }}
-                        onClick={() => form.setFieldsValue({ asnText: schemaText })}
+                        onClick={handleClearOrReset}
                     >
-                        Reset
+                        {selectedSchema === 'manual' ? 'Clear' : 'Reset'}
                     </Button>
                 </div>
                 <div style={{ clear: 'both' }} />
