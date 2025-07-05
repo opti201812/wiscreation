@@ -76,7 +76,6 @@ const SchemaBox = ({ onAddOutput, onSetTokenAndType, selectedSchema, setSelected
             });
             const data = await res.json();
             setLoading(false);
-            message.success('Compile Success');
             if (onSetTokenAndType && data.token) {
                 onSetTokenAndType(data.token, data.type_assignments);
             }
