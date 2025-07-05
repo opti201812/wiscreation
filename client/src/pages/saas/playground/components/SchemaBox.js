@@ -7,10 +7,10 @@ const { Option } = Select;
 const { TextArea } = Input;
 
 const schemaOptions = [
-    { value: 'helloWorld', label: 'Hello world schema' },
+    { value: 'helloWorld', label: 'Hello world' },
     { value: 'manual', label: 'Enter manually' },
 ];
-const schemaText = `Hello-world-schema DEFINITIONS  ::= BEGIN
+const schemaText = `Hello-world-module DEFINITIONS  ::= BEGIN
     PersonnelRecord ::= [APPLICATION 0] IMPLICIT SET {
         name            Name,
         title           [0] VisibleString,
