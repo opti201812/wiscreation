@@ -16,9 +16,9 @@ const { Meta } = Card;
 
 // 轮播图样式
 const contentStyle = {
-    height: '500px',
+    height: '400px',
     color: '#fff',
-    lineHeight: '500px',
+    lineHeight: '400px',
     textAlign: 'center',
     background: '#364d79',
     position: 'relative',
