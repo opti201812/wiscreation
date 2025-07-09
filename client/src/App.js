@@ -78,7 +78,7 @@ function AppContent({ i18n, handleLanguageChange }) {
                     <Route path="/dashboard/*" element={<Dashboard />} />
 
                     {/* SaaS应用 */}
-                    <Route path="/app/*" element={<SaasApp />} />
+                    <Route path="/apps/*" element={<SaasApp />} />
 
                     {/* 404页面 */}
                     <Route path="*" element={<NotFound />} />

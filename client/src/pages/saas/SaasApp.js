@@ -154,9 +154,9 @@ const SaasApp = () => {
     // Sider 菜单 items for antd v5+
     const sidebarMenuItems = [
         {
-            key: 'asn1',
+            key: 'asn1codec',
             icon: <AppstoreOutlined />,
-            label: <Link to="/app/asn1">{t('nav.playground')}</Link>,
+            label: <Link to="/apps/asn1codec">{t('nav.playground')}</Link>,
         },
         // Uncomment and adapt these as needed:
         // {
@@ -280,7 +280,7 @@ const SaasApp = () => {
                     <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
                         <Routes>
                             <Route path="/" element={<Playground />} />
-                            <Route path="/asn1" element={<Playground />} />
+                            <Route path="/asn1codec" element={<Playground />} />
                             <Route path="/dashboard" element={<Dashboard />} />
                             <Route path="/profile" element={<Profile />} />
                             <Route path="/settings" element={<Settings />} />

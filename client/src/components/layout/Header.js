@@ -7,7 +7,6 @@ import {
     InfoCircleOutlined,
     AppstoreOutlined,
     MailOutlined,
-    UserOutlined,
     LoginOutlined,
     MenuOutlined,
 } from '@ant-design/icons';
@@ -73,9 +72,9 @@ const Header = ({ onLanguageChange, currentLanguage }) => {
             label: <Link to="/contact">{t('nav.contact')}</Link>,
         },
         {
-            key: 'app',
+            key: 'apps',
             icon: <AppstoreOutlined />,
-            label: <Link to="/app">{t('nav.saas')}</Link>,
+            label: <Link to="/apps/asn1codec">{t('nav.saas')}</Link>,
         },
     ];
 
