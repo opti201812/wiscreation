@@ -2,15 +2,10 @@ const mysql = require('mysql2/promise');
 
 // 创建数据库连接池
 const pool = mysql.createPool({
+    host: process.env.DB_HOST,
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
-    socketPath:
-        process.platform === 'linux'
-            ? '/var/run/mysqld/mysqld.sock'
-            : process.platform === 'darwin'
-                ? '/tmp/mysql.sock'
-                : undefined,
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0
@@ -60,4 +55,4 @@ module.exports = {
     pool,
     testConnection,
     initDatabase
-}; 
+};
