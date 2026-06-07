@@ -89,7 +89,7 @@ const Projects = () => {
         {
             id: 4,
             name: '营销自动化工具',
-            description: '帮助企业实现营销流程自动化的SaaS工具',
+            description: '帮助企业实现营销流程自动化的AI工具',
             status: '未开始',
             progress: 0,
             startDate: '2023-07-01',

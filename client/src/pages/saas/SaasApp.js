@@ -20,7 +20,7 @@ import {
 } from '@ant-design/icons';
 import { useTranslation } from 'react-i18next';
 
-// SaaS子页面
+// AI子页面
 import Dashboard from './Dashboard';
 import Profile from './Profile';
 import Settings from './Settings';

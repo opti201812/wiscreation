@@ -1,14 +1,14 @@
 {
     "app": {
         "title": "WisCreation",
-        "subtitle": "Enterprise Website & SaaS Solutions"
+        "subtitle": "Enterprise AI Application Solutions"
     },
     "nav": {
         "home": "Home",
         "about": "About Us",
         "services": "Services",
         "contact": "Contact",
-        "saas": "SaaS App",
+        "saas": "AI App",
         "login": "Login",
         "register": "Register",
         "logout": "Logout",
@@ -34,8 +34,8 @@
     },
     "home": {
         "hero": {
-            "title": "Digital Solutions for Enterprise Innovation",
-            "subtitle": "Help businesses improve efficiency, reduce costs, and enhance competitiveness through our software products and services",
+            "title": "AI Application Development for Enterprise Intelligence",
+            "subtitle": "Help businesses achieve intelligent transformation and business innovation through AI application development",
             "cta": "Learn More"
         },
         "services": {
@@ -45,12 +45,12 @@
         "about": {
             "title": "About Us",
             "subtitle": "Professional software development team providing quality services",
-            "description": "WisCreation is a technology company focused on providing software solutions for enterprises. We have an experienced development team dedicated to delivering high-quality software products and services to our clients."
+            "description": "WisCreation is a technology company focused on providing AI application development and software solutions for enterprises. We have an experienced development team dedicated to delivering high-quality AI applications and software products and services to our clients."
         },
         "features": {
             "saas": {
-                "title": "Cloud SaaS Solutions",
-                "description": "Cloud-based Software as a Service solutions that empower your business"
+                "title": "AI Application Solutions",
+                "description": "AI-powered application solutions that empower your business intelligence upgrade"
             }
         },
         "stats": {
@@ -69,7 +69,7 @@
         "subtitle": "Learn about WisCreation's history and corporate culture",
         "intro": {
             "title": "Company Introduction",
-            "content": "Founded in 2018, WisCreation is a technology company focused on providing software solutions for enterprises. Our team consists of passionate and innovative technical experts dedicated to helping businesses achieve digital transformation through the power of technology."
+            "content": "Founded in 2018, WisCreation is a technology company focused on providing AI application development and intelligent solutions for enterprises. Our team consists of passionate and innovative technical experts dedicated to helping enterprises achieve intelligent transformation through the power of AI technology."
         },
         "values": {
             "title": "Our Core Values",
@@ -86,19 +86,19 @@
                 "item2": "2012: First Major Enterprise Client",
                 "item3": "2015: Mobile App Development Division",
                 "item4": "2018: Expansion Across Asia",
-                "item5": "2020: WisCreation SaaS Platform Launch",
+                "item5": "2020: WisCreation AI Platform Launch",
                 "item6": "2023: Industry Leader Recognition"
             },
             "milestone1": "Our company was established in Shanghai, initially focusing on website development services for local businesses.",
             "milestone2": "As our business grew, we acquired our first major enterprise client and began offering a wider range of software development services.",
             "milestone3": "To meet the growing demand for mobile applications, we established a dedicated mobile app development team.",
             "milestone4": "We expanded our operations across Asia, opening offices in Beijing, Tokyo, and Singapore.",
-            "milestone5": "We launched our own SaaS platform, providing scalable cloud solutions for small and medium-sized businesses.",
+            "milestone5": "We launched our own AI application platform, providing scalable intelligent solutions for small and medium-sized businesses.",
             "milestone6": "Our efforts were recognized as we were named an industry leader in software development and received multiple awards for technical innovation."
         },
         "mission": {
             "title": "Our Mission",
-            "description": "To help businesses grow through excellent digital solutions. We combine innovative approaches and the latest technologies to drive our clients' success."
+            "description": "To help businesses grow through excellent AI and digital solutions. We combine AI technology with innovative approaches to drive our clients' intelligent transformation and success."
         },
         "team": {
             "title": "Leadership Team",
@@ -111,7 +111,7 @@
     },
     "services": {
         "title": "Services & Products",
-        "subtitle": "We provide comprehensive software development services and innovative cloud solutions",
+        "subtitle": "We provide comprehensive AI application development and intelligent solutions",
         "main": {
             "title": "Our Main Services"
         },
@@ -129,13 +129,13 @@
             ]
         },
         "saas": {
-            "title": "ASN.1 Encoding/Decoding API Service",
-            "description": "Cloud-based ASN.1 processing solutions that help businesses reduce protocol development costs and improve system interoperability and scalability."
+            "title": "AI Application Services",
+            "description": "AI-powered application solutions that help businesses achieve intelligent business processes, improving operational efficiency and innovation capabilities."
         },
         "cloudSolutions": {
             "features": [
                 "Cloud migration services",
-                "SaaS product development",
+                "AI application development",
                 "Cloud infrastructure management",
                 "Serverless applications",
                 "Scalable cloud solutions"

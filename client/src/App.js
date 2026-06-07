@@ -24,7 +24,7 @@ import Register from './pages/auth/Register';
 import Dashboard from './pages/dashboard/Dashboard';
 import NotFound from './pages/NotFound';
 
-// SaaS应用
+// AI应用
 import SaasApp from './pages/saas/SaasApp';
 
 // 语言与Antd配置的映射
@@ -77,7 +77,7 @@ function AppContent({ i18n, handleLanguageChange }) {
                     {/* 用户面板 */}
                     <Route path="/dashboard/*" element={<Dashboard />} />
 
-                    {/* SaaS应用 */}
+                    {/* AI应用 */}
                     <Route path="/apps/*" element={<SaasApp />} />
 
                     {/* 404页面 */}

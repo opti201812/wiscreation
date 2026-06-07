@@ -1,14 +1,14 @@
 {
     "app": {
         "title": "WisCreation",
-        "subtitle": "企業網站與SaaS解決方案"
+        "subtitle": "企業AI應用開發與智能化方案"
     },
     "nav": {
         "home": "首頁",
         "about": "關於我們",
         "services": "服務與產品",
         "contact": "聯繫我們",
-        "saas": "SaaS應用",
+        "saas": "AI應用",
         "login": "登入",
         "register": "註冊",
         "logout": "退出登入",
@@ -43,7 +43,7 @@
         },
         "features": {
             "saas": {
-                "title": "雲端SaaS解決方案",
+                "title": "AI應用解決方案",
                 "description": "基於雲的軟體即服務解決方案，賦能您的業務"
             }
         },
@@ -87,7 +87,7 @@
             "description": "根據您的業務需求，為您量身定制的軟體解決方案，從需求分析、設計開發到上線維護。"
         },
         "saas": {
-            "title": "SaaS服務",
+            "title": "AI應用服務",
             "description": "基於雲的軟體即服務解決方案，幫助企業降低IT成本，提高業務靈活性和可擴展性。"
         },
         "mobile": {
