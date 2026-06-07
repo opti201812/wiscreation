@@ -1,6 +1,7 @@
 {
     "name": "client",
     "version": "0.1.0",
+    "homepage": "https://opti201812.github.io/wiscreation",
     "private": true,
     "dependencies": {
         "@testing-library/dom": "^10.4.0",
