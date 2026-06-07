@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/wiscreation/static/css/main.9d8bb639.css",
-    "main.js": "/wiscreation/static/js/main.e89f2253.js",
+    "main.js": "/wiscreation/static/js/main.413ed97c.js",
     "static/js/453.258b012d.chunk.js": "/wiscreation/static/js/453.258b012d.chunk.js",
     "index.html": "/wiscreation/index.html",
     "main.9d8bb639.css.map": "/wiscreation/static/css/main.9d8bb639.css.map",
-    "main.e89f2253.js.map": "/wiscreation/static/js/main.e89f2253.js.map",
+    "main.413ed97c.js.map": "/wiscreation/static/js/main.413ed97c.js.map",
     "453.258b012d.chunk.js.map": "/wiscreation/static/js/453.258b012d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9d8bb639.css",
-    "static/js/main.e89f2253.js"
+    "static/js/main.413ed97c.js"
   ]
 }
